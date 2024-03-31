@@ -1,0 +1,5 @@
+services:
+  - name: project
+    type: web
+    buildCommand: npm run build
+    publishDir: dist
