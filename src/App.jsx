@@ -1,5 +1,5 @@
 import React from "react";
-import videobg from "./assets/bgvideo.mp4";
+import videobg from "./assets/videolg.mp4";
 import HomeLeft from "./Components/HomeLeft";
 import HomeRight from "./Components/HomeRight";
 import EITLogo from "./assets/EITLogo.png";
@@ -20,13 +20,12 @@ const App = () => {
         {/** LOGO  */}
         <div className="absolute left-[50%] lg:-top-[4%] h-[10%] md:h-[10%] md:w-[5%] lg:h-[19%] lg:w-[10%] z-40 transform -translate-x-1/2 translate-y-1/2 relative">
           {/** Rotate logoCircle */}
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 20 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.9 }}
             className="h-full w-full object-cover"
-          >
-            {/* <motion.div
+          > <motion.div
               className="h-full w-full object-cover"
               animate={{ rotate: 360 }}
               transition={{ duration: 20, loop: Infinity }}
@@ -47,8 +46,8 @@ const App = () => {
               }}
             >
               <img src={EITLogo} alt="" style={{ width: "200%" }} />
-            </div> */}
-          </motion.div>
+            </div>
+          </motion.div> */}
         </div>
         <HomeLeft />
         <HomeRight />

@@ -1,31 +1,84 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import s1 from "../assets/s1.webp";
 import s2 from "../assets/s2.webp";
 import s3 from "../assets/s3.webp";
 import s4 from "../assets/s4.webp";
 import s5 from "../assets/s5.jpg";
 import s6 from "../assets/s6.jpg";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 1,
+  },
+};
+
+const styles = {
+  slider: {
+    margin: "0 20px",
+    overflow: "hidden",
+    padding: "0rem 0",
+  },
+  image: {
+    width: "100%",
+    borderRadius: "10px",
+    height: "10rem",
+  },
+  dotButton: {
+    border: "none",
+    background: "rgb(255, 68, 68)",
+  },
+  activeDotButton: {
+    background: "rgb(255, 68, 68) !important",
+  },
+};
+
+const sliderImageUrl = [
+  { url: s1, heading: "Solar Energy" },
+  { url: s2, heading: "Smart City" },
+  { url: s3, heading: "Second point" },
+  { url: s4, heading: "Wind Energy" },
+];
+
 const HeroEnergy = () => {
   return (
     <>
-      <div className="   overflow-x-hidden overflow-y-hidden row col-md-12 bg-black flex flex-col lg:flex-row py-14  text-white ">
+      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-black flex flex-col lg:flex-row py-14  text-white m-0 ">
         <div className="col-md-8 mx-md-1 row justify-content-start align-items-center overflow-x-scroll scrollbar-hidden flex-nowrap">
-          <div className="h-[35vh] lg:h-[40vh] col-md-4 mt-10">
-            <img className="h-full w-full object-cover" src={s1} alt={s1} />
-            <p className="text-white overimg">Solar Energy</p>
-          </div>
-          <div className="h-[35vh] lg:h-[40vh] col-md-4 mt-10">
-            <img className="h-full w-full object-cover" src={s2} alt={s1} />
-            <p className="text-white overimg">Smart City</p>
-          </div>
-          <div className="h-[35vh] lg:h-[40vh] col-md-4 mt-10">
-            <img className="h-full w-full object-cover" src={s3} alt={s2} />
-            <p className="text-white overimg">Second point </p>
-          </div>
-          <div className="h-[35vh] lg:h-[40vh] col-md-4 mt-10">
-            <img className="h-full w-full object-cover" src={s5} alt={s4} />
-            <p className="text-white overimg">Wind Energy</p>
+          <div className="parent text-white">
+            <Carousel
+              responsive={responsive}
+              autoPlay={true}
+              swipeable={true}
+              draggable={true}
+              showDots={true}
+              infinite={true}
+              partialVisible={false}
+              dotListClass="custom-dot-list-style"
+              customDot={<CustomDot />}
+            >
+              {sliderImageUrl.map((imageUrl, index) => (
+                <div className="slider" key={index} style={styles.slider}>
+                  <img src={imageUrl.url} alt="slider" style={styles.image} />
+                  <p className="text-white overimg">{imageUrl.heading}</p>
+                </div>
+              ))}
+            </Carousel>
           </div>
         </div>
 
@@ -58,4 +111,7 @@ const HeroEnergy = () => {
   );
 };
 
+const CustomDot = ({ onClick, ...rest }) => (
+  <button onClick={() => onClick()} style={styles.dotButton} {...rest}></button>
+);
 export default HeroEnergy;
