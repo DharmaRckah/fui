@@ -11,17 +11,17 @@ import s6 from "../assets/s6.jpg";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
     slidesToSlide: 4
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3,
+    items: 2,
     slidesToSlide: 3
   },
   mobile: {
     breakpoint: { max: 767, min: 464 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1 
   }
 };
@@ -30,21 +30,22 @@ const styles = {
   slider: {
     margin: "0 20px",
     overflow: "hidden",
-    padding: "2rem 0"
+    padding: "0rem 0",
   },
   image: {
     width: "100%",
-    borderRadius: "10px",
-    height:"8rem"
+    borderRadius: "1px",
+    height: "20rem",
   },
   dotButton: {
     border: "none",
-    background: "rgb(255, 68, 68)"
+    background: "rgb(255, 68, 68)",
   },
   activeDotButton: {
-    background: "rgb(255, 68, 68) !important"
-  }
+    background: "rgb(255, 68, 68) !important",
+  },
 };
+
 
 const sliderImageUrl = [
   { url: s1 },
@@ -58,7 +59,7 @@ const sliderImageUrl = [
 
 const ReactProject = () => {
   return (
-    <div className="parent bg-dark text-white">
+    <div className="parent bg-white text-dark">
       <h3 className="mx-4 fw-bold py-2  ">Our Recent Projects</h3>
       <Carousel
         responsive={responsive}

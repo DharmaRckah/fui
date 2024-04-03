@@ -3,7 +3,7 @@ import Technology from "../Components/Technology";
 import Infrastructure from "../Components/Infrastructure";
 import App from "../App";
 import Contact from "../Components/Contact";
-
+import { AboutUs } from "../Components/AboutUs";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +25,7 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  { path: "/about-us", element: <AboutUs /> },
 ]);
 
 export default router;

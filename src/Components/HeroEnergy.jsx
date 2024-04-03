@@ -13,17 +13,17 @@ import s6 from "../assets/s6.jpg";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
     slidesToSlide: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3,
+    items: 2,
     slidesToSlide: 3,
   },
   mobile: {
     breakpoint: { max: 767, min: 464 },
-    items: 2,
+    items: 1,
     slidesToSlide: 1,
   },
 };
@@ -36,8 +36,8 @@ const styles = {
   },
   image: {
     width: "100%",
-    borderRadius: "10px",
-    height: "10rem",
+    borderRadius: "1px",
+    height: "20rem",
   },
   dotButton: {
     border: "none",
@@ -58,7 +58,7 @@ const sliderImageUrl = [
 const HeroEnergy = () => {
   return (
     <>
-      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-black flex flex-col lg:flex-row py-14  text-white m-0 ">
+      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-14  text-dark m-0 ">
         <div className="col-md-8 mx-md-1 row justify-content-start align-items-center overflow-x-scroll scrollbar-hidden flex-nowrap">
           <div className="parent text-white">
             <Carousel
@@ -75,18 +75,18 @@ const HeroEnergy = () => {
               {sliderImageUrl.map((imageUrl, index) => (
                 <div className="slider" key={index} style={styles.slider}>
                   <img src={imageUrl.url} alt="slider" style={styles.image} />
-                  <p className="text-white overimg">{imageUrl.heading}</p>
+                  <p className="text-white overimg ">{imageUrl.heading}</p>
                 </div>
               ))}
             </Carousel>
           </div>
         </div>
 
-        <div className=" h-[45vh] lg:h-[35vh] col-md-3 py-3 mt-md-5">
-          <p className=" lg:font-bold lg:text-[1.4rem] lg:leading-8 font-bold text-[1.6rem] font-Montserrat">
+        <div className=" h-[45vh] lg:h-[35vh] col-md-3 py-3  row coloum align-top " >
+          <p className=" lg:font-bold lg:text-[1.4rem] lg:leading-8 font-bold text-[1.6rem] font-Montserrat ">
             A Glimpse into Electric, Wind, and Solar Energy
           </p>
-          <p className="lg:text-[0.8rem] lg:leading-[1rem] mt-3 font-Montserrat">
+          <p className="lg:text-[0.8rem] lg:leading-[1rem] mt-3 font-Montserrat ">
             Everest Technology is inspired by the all mighty Mt Everest –
             highest peak in the world thrive to be leading IT services provider
             in the Middle East region and globally. Everest Technology is the

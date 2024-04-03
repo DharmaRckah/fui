@@ -27,9 +27,12 @@ const styles = {
     padding: "2rem 0"
   },
   image: {
-    width: "100%",
-    borderRadius: "10px",
-    height:"6rem"
+    width: "75%",
+    aspectRatio: "3/2",
+    objectFit: "contain",
+    mixBlendMode: "color-burn",
+    // filter: brightness(0.5) ,grayscale(100%);
+
   },
   dotButton: {
     border: "none",
@@ -37,7 +40,10 @@ const styles = {
   },
   activeDotButton: {
     background: "rgb(255, 68, 68) !important"
-  }
+  },
+  // react-multiple-carousel__arrow:{
+  //   display:"none"
+  // }
 };
 
 const sliderImageUrl = [
@@ -58,19 +64,23 @@ const sliderImageUrl = [
 
 const OurClient = () => {
   return (
-    <div className="parent bg-dark text-white">
+    <div className="parent bg-white text-dark">
+       <style>
+  {`.react-multiple-carousel__arrow {
+    display: none;
+  }`}
+</style>
+
       <h3 className="mx-4 h2 fw-bold py-2 text-center ">Our Clients </h3>
       <p className="mx-4 fw-bold py-2  text-center">We’re trusted by some of the world’s most recognizable brands. </p>
       <Carousel
         responsive={responsive}
-        autoPlay={true}
+        autoPlay={false}
         swipeable={true}
         draggable={true}
         showDots={true}
         infinite={true}
         partialVisible={false}
-        dotListClass="custom-dot-list-style"
-        customDot={<CustomDot />}
       >
         {sliderImageUrl.map((imageUrl, index) => (
           <div className="slider" key={index} style={styles.slider}>
@@ -81,13 +91,4 @@ const OurClient = () => {
     </div>
   );
 };
-
-const CustomDot = ({ onClick, ...rest }) => (
-  <button
-    onClick={() => onClick()}
-    style={styles.dotButton}
-    {...rest}
-  ></button>
-);
-
 export default OurClient;

@@ -40,7 +40,7 @@ const OurLatestBlog = () => {
         className="h-[80%] w-[full] flex gap-5 items-center parent-container"
       >
         {/** This flex is getting shirnk can you write so that it can be scrollable  */}
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
@@ -65,7 +65,7 @@ const OurLatestBlog = () => {
           </div>
         </div>
 
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
@@ -90,7 +90,7 @@ const OurLatestBlog = () => {
           </div>
         </div>
 
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
@@ -115,7 +115,7 @@ const OurLatestBlog = () => {
           </div>
         </div>
 
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
@@ -140,7 +140,7 @@ const OurLatestBlog = () => {
           </div>
         </div>
 
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
@@ -165,7 +165,7 @@ const OurLatestBlog = () => {
           </div>
         </div>
 
-        <div className="h-[90%] w-[25%] bg-blue-200 p-3 child-item">
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"

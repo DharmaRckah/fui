@@ -418,7 +418,9 @@ const TechHomeInto: React.FC = () => {
                 <Grid item md={7} sx={{ display: "flex" }} sm={8}>
                   <NavBarContainer sx={{ cursor: "pointer", color: "white" }}>
                     <Box>Explore</Box>
-                    <Box>About Us</Box>
+                    <Box>
+                      <Link to="/about-us"> About Us</Link>
+                    </Box>
                     <Box>Media</Box>
                   </NavBarContainer>
                 </Grid>

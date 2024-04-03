@@ -11,6 +11,7 @@ import { ReviewSlider } from "./ReviewSlider";
 import OurLatestBlog from "./OurLatestBlog";
 import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
+import TestimonialSlider from "./TestimonialSlider";
 // import backgroundImgae from "../assets/infrastructure/background.png";
 
 const Hero = () => {
@@ -38,6 +39,7 @@ const Hero = () => {
       <Readmore />
       <ReviewSlider />
       <OurLatestBlog />
+      <TestimonialSlider/>
       <NewsLetter />
       <Footer />
     </div>
