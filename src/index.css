@@ -40,7 +40,7 @@
 .awssld__content {
   background-color: transparent !important;
 }
-.awssld_bullets,
-.awssld_bullets--active {
+.awssld__bullets,
+.awssld__bullets--active {
   display: none;
 }

@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./TestimonialSlider.css";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
 import ReactStars from "react-rating-stars-component";
 
 const TestimonialSlider = () => {
@@ -36,75 +38,64 @@ const TestimonialSlider = () => {
     },
   ];
 
-  const ratingChanged = () => {
-    return 5;
+  const [rating, setRating] = useState(5);
+
+  const ratingChanged = (newRating) => {
+    setRating(newRating);
   };
 
   return (
-    <div className="items">
+    <div className="items ">
       <div className="container-fluid bg-body-tertiary py-3">
         <div id="testimonialCarousel" className="carousel">
-          <div className="carousel-inner">
-            {testimonials.map((item, index) => (
-              <div
-                className={`carousel-item ${index === 0 ? "active" : ""}`}
-                key={index}
-              >
-                <div className="card shadow-sm rounded-3">
-                  <div className="quotes display-2 text-body-tertiary">
-                    <i className="bi bi-quote"></i>
-                  </div>
-                  <div className="card-body">
-                    <p className="card-text">{item.content}</p>
-                    <div className="d-flex align-items-center pt-2">
-                      <img
-                        src={`https://source.unsplash.com/random/300×${
-                          index + 1
-                        }00/?user `}
-                        alt=""
-                      />
-                      <div>
-                        <h5 className="card-title fw-bold">{item.name}</h5>
-                        <span className="text-secondary">
-                          {item.profession}
-                        </span>
-                      </div>
+          <AwesomeSlider>
+            <div className="carousel-inner ">
+              {testimonials.map((item, index) => (
+                <div
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                  key={index}
+                >
+                  <div className="card shadow-sm rounded-3">
+                    <div className="quotes display-2 text-body-tertiary">
+                      <i className="bi bi-quote"></i>
                     </div>
-                    <ReactStars
-                      count={5}
-                      onChange={ratingChanged}
-                      size={24}
-                      activeColor="#ffd700"
-                    />
+                    <div className="card-body">
+                      <p className="card-text">{item.content}</p>
+                      <div className="d-flex align-items-center pt-2">
+                        <img
+                          src={`https://source.unsplash.com/random/300×${
+                            index + 1
+                          }00/?user `}
+                          alt=""
+                        />
+                        <div>
+                          <h5 className="card-title fw-bold">{item.name}</h5>
+                          <span className="text-secondary">
+                            {item.profession}
+                          </span>
+                        </div>
+                      </div>
+                      <ReactStars
+                        count={5}
+                        onChange={5}
+                        size={24}
+                        activeColor="#ffd700"
+                        value={5}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+              ))}
+            </div>
+          </AwesomeSlider>
+          {/* <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button> */}
         </div>
       </div>
     </div>

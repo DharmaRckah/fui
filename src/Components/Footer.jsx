@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="h-[100%] flex gap-5 py-12 border-b border-solid border-slate-700 max-md:flex-wrap">
         <img
           loading="lazy"
-          src="logo.png"
+          src={logo}
           className="shrink-0 self-start max-w-full aspect-[4] w-[9%] h-[5rem]"
         />
         <div className="flex flex-col flex-1 whitespace-nowrap">
