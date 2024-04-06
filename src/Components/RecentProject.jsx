@@ -12,28 +12,28 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 4
+    slidesToSlide: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 768 },
     items: 2,
-    slidesToSlide: 3
+    slidesToSlide: 3,
   },
   mobile: {
     breakpoint: { max: 767, min: 464 },
     items: 1,
-    slidesToSlide: 1 
-  }
+    slidesToSlide: 1,
+  },
 };
 
 const styles = {
   slider: {
-    margin: "0 20px",
+    margin: "0",
     overflow: "hidden",
     padding: "0rem 0",
   },
   image: {
-    width: "100%",
+    width: "95%",
     borderRadius: "1px",
     height: "20rem",
   },
@@ -46,7 +46,6 @@ const styles = {
   },
 };
 
-
 const sliderImageUrl = [
   { url: s1 },
   { url: s2 },
@@ -54,12 +53,12 @@ const sliderImageUrl = [
   { url: s3 },
   { url: s4 },
   { url: s5 },
-  { url: s6 }
+  { url: s6 },
 ];
 
 const ReactProject = () => {
   return (
-    <div className="parent bg-white text-dark">
+    <div className="parent bg-white text-dark px-2 mt-md-4">
       <h3 className="mx-4 fw-bold py-2  ">Our Recent Projects</h3>
       <Carousel
         responsive={responsive}
@@ -83,11 +82,7 @@ const ReactProject = () => {
 };
 
 const CustomDot = ({ onClick, ...rest }) => (
-  <button
-    onClick={() => onClick()}
-    style={styles.dotButton}
-    {...rest}
-  ></button>
+  <button onClick={() => onClick()} style={styles.dotButton} {...rest}></button>
 );
 
 export default ReactProject;

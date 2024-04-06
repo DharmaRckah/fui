@@ -18,8 +18,29 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
-.slick-track{
+.slick-track {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.slick-slide div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh;
+}
+
+@media screen and (min-width: 768px) {
+  .awssld__wrapper {
+    height: 40vh !important;
+  }
+}
+
+.awssld__content {
+  background-color: transparent !important;
+}
+.awssld_bullets,
+.awssld_bullets--active {
+  display: none;
 }

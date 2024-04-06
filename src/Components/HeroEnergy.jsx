@@ -30,14 +30,14 @@ const responsive = {
 
 const styles = {
   slider: {
-    margin: "0 20px",
+    margin: "0 .5em",
     overflow: "hidden",
-    padding: "0rem 0",
+    padding: "0",
   },
   image: {
     width: "100%",
     borderRadius: "1px",
-    height: "20rem",
+    height: "15rem",
   },
   dotButton: {
     border: "none",
@@ -82,7 +82,7 @@ const HeroEnergy = () => {
           </div>
         </div>
 
-        <div className=" h-[45vh] lg:h-[35vh] col-md-3 py-3  row coloum align-top " >
+        <div className=" h-[45vh] lg:h-[35vh] col-md-3 py-3  row coloum align-top ">
           <p className=" lg:font-bold lg:text-[1.4rem] lg:leading-8 font-bold text-[1.6rem] font-Montserrat ">
             A Glimpse into Electric, Wind, and Solar Energy
           </p>

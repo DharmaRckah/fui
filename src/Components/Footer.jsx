@@ -1,5 +1,5 @@
 // import React from "react";
-
+import logo from "../assets/logo.png";
 const Footer = () => {
   return (
     // <div className=" h-[40%] md:h-[70%] lg:h-[70%] w-full bg-black">
