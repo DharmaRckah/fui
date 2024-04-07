@@ -20,7 +20,7 @@ const Navbar = ({ backgroundColor }) => {
         <div>
           <img
             className=" py-3 "
-            width={100}
+            width={75}
             height={4}
             src={logo}
             alt="logo"

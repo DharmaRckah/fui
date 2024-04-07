@@ -488,11 +488,11 @@ const TechHomeInto: React.FC = () => {
             </Box>
           </HeaderContainer>
         </Box>
-        <ImageTextLayout reversed={false} />
+        {/* <ImageTextLayout reversed={false} />
         <br />
         <br />
         <ImageTextLayout reversed={true} />
-        <br />
+        <br /> */}
         <br />
         <ImageTextLayout reversed={false} />
 

@@ -33,7 +33,7 @@ const styles = {
     padding: "0rem 0",
   },
   image: {
-    width: "95%",
+    width: "97%",
     borderRadius: "1px",
     height: "20rem",
   },

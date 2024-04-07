@@ -44,7 +44,32 @@ const OurLatestBlog = () => {
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/5b81/f28b/9b8aa9ec636253e092fc9000b669a206?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UtkkczvdSndosE5PAwRSrBv1Z-yTy1szpnNo0Rxi2WgUPG8hIjksTj029x7HpN9BREsuQTQTXnVndy9IIz45~yfB9aLgQ-LHpgoMfT7qSm0ETogSIcinCvxf5RBLNcrpTW0sJbVnPzzOxBXJaG7VDrER1XoRXOfPWb5rjI0bIqiLG09u-72wF06moZE8TFkXsew03qicix6eIBAL7SzlddpRFvwPEDnriWavp9GTG9SFBHVgQ5NlN1IK8TvkPCEuntc5N-TwtVPkB5mzNpf0G7F9t~hLWEM7yRtqcbOAdWMYiJhMeYsveeHvCb7tU7sgCh6a1OZLobTbgZ4kHh73sQ__"
+              src="https://media.istockphoto.com/id/1608210815/photo/wind-farming.jpg?s=2048x2048&w=is&k=20&c=WS0LdvzH3PVYeBr6TgTGfsnQc0ElDwQMH97xLphgWTo="
+              alt="2s"
+            />
+          </div>
+          <p className="mt-2 font-semibold">
+            Lorem ipsum dolor sit <br /> amet, conse ct etur.
+          </p>
+          <p className="text-[0.8rem] mt-1">
+            Let's delve into trends shaping the 2024 job market with drawing
+            insights from layoff of 2023 and explore the skills and experiences
+            that are most in demand.
+          </p>
+
+          <div className="flex items-center gap-1">
+            <Link className="underline">Read Story</Link>
+            <p className="mt-2">
+              <FaArrowRight />
+            </p>
+          </div>
+        </div>
+
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
+          <div className="h-[50%] w-full bg-blue-400">
+            <img
+              className=" h-full w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
           </div>
@@ -69,7 +94,7 @@ const OurLatestBlog = () => {
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/3251/8078/25ad8ad728bc9f549496c9c50bbcb5eb?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkoJrJ8ClhONLU3nw35jxEiaSMK0TWKNFyyD-DGON~LSUfajrPh1IUB9J9NlHfayrzjQYBBAi8TCn9abZEpQM8C7WOjinodsULo~1TIsLqGuVry2q~dGZFB-qwGzpjiCFE-fP7EvdbiLP~d-zL~CrV8c4sALyWHSyr9MF22a9P1tSiDyjm0IcJZg0VVtVOt8z694rFItNWX2K1HyW7rQjwzi~5b0b6PSjcxpShVvI0U42oTL-SBj03r1a5g-DiuPEK6FFAF6wy4lpoxJ1BMfmUEZVu0Sj0yC5Tl8bWIoiC8gGB7hWtrGtwDSCsO-L0LMFwBdHVsQGdKMXpOskvoNaw__"
+              src="https://media.istockphoto.com/id/1288967558/photo/low-angle-view-of-technician-walks-with-investor-through-field-of-solar-panels-alternative.jpg?s=2048x2048&w=is&k=20&c=Zj2hlQnrw-y6u6Sb9uM38eZfKbIIAEYpRF3JKU0SO3E="
               alt=""
             />
           </div>
@@ -94,7 +119,7 @@ const OurLatestBlog = () => {
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/2977/5450/1697ac35049d85bd676d940a70655e56?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H6m8X2KumFlAdL1ivNeg8tFOKWvyWbo3OsT5Hw1EO5lF-mC9aK9jZbptIfoU68uuCJS~jeilxCwbzfpaLDtzckvkB~2e-nyQxEr7N~WZfdcuvcjy4iL448f5JjIDiS-Qrty10vAoi6Vqj-Ls-AJ6PNolEmXbDKWmbNk7qnpB6ifCPfYLulx5ZvPugtxsr7NPBloI0erYUCRk08ECqn0krlhh11n7042IGYf0EfpS5ofpBqHP4CUtn50ZzOvy5q1JgVzSs8WR5uNGcsS4bEj~uXQwKylOt5b2gdIPz8EYuFo3vZ5q3UrlFONNfhPkO7OIMmWlaEFrw0jfNMgufbCTEw__"
+              src="https://images.unsplash.com/photo-1595437193398-f24279553f4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjB3aW5kfGVufDB8fDB8fHww"
               alt=""
             />
           </div>
@@ -119,7 +144,7 @@ const OurLatestBlog = () => {
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/5b81/f28b/9b8aa9ec636253e092fc9000b669a206?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UtkkczvdSndosE5PAwRSrBv1Z-yTy1szpnNo0Rxi2WgUPG8hIjksTj029x7HpN9BREsuQTQTXnVndy9IIz45~yfB9aLgQ-LHpgoMfT7qSm0ETogSIcinCvxf5RBLNcrpTW0sJbVnPzzOxBXJaG7VDrER1XoRXOfPWb5rjI0bIqiLG09u-72wF06moZE8TFkXsew03qicix6eIBAL7SzlddpRFvwPEDnriWavp9GTG9SFBHVgQ5NlN1IK8TvkPCEuntc5N-TwtVPkB5mzNpf0G7F9t~hLWEM7yRtqcbOAdWMYiJhMeYsveeHvCb7tU7sgCh6a1OZLobTbgZ4kHh73sQ__"
+              src="https://images.unsplash.com/photo-1596786436253-ebfe4360282d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvbGFyJTIwd2luZHxlbnwwfHwwfHx8MA%3D%3D"
               alt=""
             />
           </div>
@@ -144,32 +169,7 @@ const OurLatestBlog = () => {
           <div className="h-[50%] w-full bg-blue-400">
             <img
               className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/3251/8078/25ad8ad728bc9f549496c9c50bbcb5eb?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qkoJrJ8ClhONLU3nw35jxEiaSMK0TWKNFyyD-DGON~LSUfajrPh1IUB9J9NlHfayrzjQYBBAi8TCn9abZEpQM8C7WOjinodsULo~1TIsLqGuVry2q~dGZFB-qwGzpjiCFE-fP7EvdbiLP~d-zL~CrV8c4sALyWHSyr9MF22a9P1tSiDyjm0IcJZg0VVtVOt8z694rFItNWX2K1HyW7rQjwzi~5b0b6PSjcxpShVvI0U42oTL-SBj03r1a5g-DiuPEK6FFAF6wy4lpoxJ1BMfmUEZVu0Sj0yC5Tl8bWIoiC8gGB7hWtrGtwDSCsO-L0LMFwBdHVsQGdKMXpOskvoNaw__"
-              alt=""
-            />
-          </div>
-          <p className="mt-2 font-semibold">
-            Lorem ipsum dolor sit <br /> amet, conse ct etur.
-          </p>
-          <p className="text-[0.8rem] mt-1">
-            Let's delve into trends shaping the 2024 job market with drawing
-            insights from layoff of 2023 and explore the skills and experiences
-            that are most in demand.
-          </p>
-
-          <div className="flex items-center gap-1">
-            <Link className="underline">Read Story</Link>
-            <p className="mt-2">
-              <FaArrowRight />
-            </p>
-          </div>
-        </div>
-
-        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
-          <div className="h-[50%] w-full bg-blue-400">
-            <img
-              className=" h-full w-full object-cover"
-              src="https://s3-alpha-sig.figma.com/img/2977/5450/1697ac35049d85bd676d940a70655e56?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=H6m8X2KumFlAdL1ivNeg8tFOKWvyWbo3OsT5Hw1EO5lF-mC9aK9jZbptIfoU68uuCJS~jeilxCwbzfpaLDtzckvkB~2e-nyQxEr7N~WZfdcuvcjy4iL448f5JjIDiS-Qrty10vAoi6Vqj-Ls-AJ6PNolEmXbDKWmbNk7qnpB6ifCPfYLulx5ZvPugtxsr7NPBloI0erYUCRk08ECqn0krlhh11n7042IGYf0EfpS5ofpBqHP4CUtn50ZzOvy5q1JgVzSs8WR5uNGcsS4bEj~uXQwKylOt5b2gdIPz8EYuFo3vZ5q3UrlFONNfhPkO7OIMmWlaEFrw0jfNMgufbCTEw__"
+              src="https://images.unsplash.com/photo-1472313420546-a46e561861d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvbGFyJTIwd2luZHxlbnwwfHwwfHx8MA%3D%3D"
               alt=""
             />
           </div>

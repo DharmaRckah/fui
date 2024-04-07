@@ -35,6 +35,10 @@
   .awssld__wrapper {
     height: 40vh !important;
   }
+  
+.react-multi-carousel-list  {
+  margin-left: 1.5em;
+}
 }
 
 .awssld__content {
@@ -43,4 +47,42 @@
 .awssld__bullets,
 .awssld__bullets--active {
   display: none;
+}
+.img-fluid {
+  height: 15em;
+  background-image: url("https://s3-alpha-sig.figma.com/img/5154/bbee/e7be51ca6c96efdf6fbcbc9fc344833e?Expires=1713139200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bLJgURrF79buyxcpznbgkJ-wlTcSdeDO~b8qehEQXTNnXJ-Twh4s4dlU43yhLHs7Myt5Wj7C~l-n~bqXYdmkC9q4Az5xaPiqrPrDQqS1bLj-fGa5DYH1dbAJy9LvQ24MDRriSZ3StWcOp-kVezMZPb0fuuYwsFUrJxPqwHl31AWq0HSHA9kxgymHcXxpEoZdw0i8867nc25Svlk08r3vB0URTwZI0-zdwtORgmqFlWq4NrFHn6SqGYuqrQ2QB0YQrHQEjA~hc4fQB01w7~HamLEHim~bSRZ9ceJJtklYxnybhva4bCY7TsQdRDTMPHjTE1iWwPWCcuMaD40ddx4CrQ__");
+  min-width: min-content;
+  background-size: cover;
+  padding: 25px;
+  background-position: 0em -24em ;
+  background-attachment: fixed;
+  border-radius: 0 !important ;
+}
+.img-fluid {
+  position: relative;
+}
+
+.img-fluid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.card.bg-dark.text-white.flex.img-fluid {
+  position: relative;
+}
+.mbr-img-wrap{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  min-width: min-content;
+  background-size: cover;
+  padding: 25px;
+  background-position: 0em -24em ;
+  /* background-attachment: fixed; */
+  border-radius: 0 !important ;
 }
