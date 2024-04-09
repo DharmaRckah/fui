@@ -1,5 +1,4 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -28,7 +27,7 @@ const styles = {
     padding: "2rem 0",
   },
   image: {
-    width: 100,
+    width: "75%",
     aspectRatio: "3/2",
     objectFit: "contain",
     mixBlendMode: "color-burn",
@@ -41,9 +40,6 @@ const styles = {
   activeDotButton: {
     background: "rgb(255, 68, 68) !important",
   },
-  // react-multiple-carousel__arrow:{
-  //   display:"none"
-  // }
 };
 
 const sliderImageUrl = [
@@ -85,12 +81,9 @@ const sliderImageUrl = [
   },
 ];
 
-const OurClient = ({ bg = "white" }) => {
+const OurClient = () => {
   return (
-    <div
-      className="parent "
-      style={{ backgroundColor: bg, color: bg === "white" ? "black" : "white" }}
-    >
+    <div className="parent bg-white text-dark">
       <style>
         {`.react-multiple-carousel__arrow {
     display: none;
@@ -101,7 +94,7 @@ const OurClient = ({ bg = "white" }) => {
       <p className="mx-4 fw-bold py-2  text-center">
         We’re trusted by some of the world’s most recognizable brands.{" "}
       </p>
-      {/* <Carousel
+      <Carousel
         responsive={responsive}
         autoPlay={false}
         swipeable={true}
@@ -109,15 +102,13 @@ const OurClient = ({ bg = "white" }) => {
         showDots={true}
         infinite={true}
         partialVisible={false}
-      > */}
-      <Marquee direction="right" speed={40} responsive={responsive}>
+      >
         {sliderImageUrl.map((imageUrl, index) => (
           <div className="slider" key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />
           </div>
         ))}
-      </Marquee>
-      {/* </Carousel> */}
+      </Carousel>
     </div>
   );
 };

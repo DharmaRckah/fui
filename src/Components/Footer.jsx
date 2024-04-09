@@ -12,7 +12,7 @@ const Footer = () => {
         <img
           loading="lazy"
           src={logo}
-          className="shrink-0 self-start max-w-full aspect-[4] w-[9%] h-[5rem]"
+          className="shrink-0 self-start max-w-full aspect-[4] w-[9%] h-[8rem]"
         />
         <div className="flex flex-col flex-1 whitespace-nowrap">
           <div className="justify-center py-3 text-base font-medium leading-4 text-white">

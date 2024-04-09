@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./TestimonialSlider.css";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
 import ReactStars from "react-rating-stars-component";
+import Marquee from "react-fast-marquee";
 
 const TestimonialSlider = () => {
   const testimonials = [
@@ -10,31 +9,31 @@ const TestimonialSlider = () => {
       name: "Delbert Simonas",
       profession: "Store Owner",
       content:
-        "Online reviews can make or break a customer's decision to make a purchase. Read about these customer review sites where your customers' satisfaction is our priority.",
+        "Online reviews can make or break a customer's decision. Customer satisfaction is our priority.",
     },
     {
       name: "Tikoh Amin",
       profession: "Salon Owner",
       content:
-        "When you think of Apple, you automatically think expensive. If you're anything like me, when purchasing this laptop I was skeptical about the laptops I purchased.",
+        "When you think of Apple, you think expensive. Skeptical about laptops I purchased.",
     },
     {
       name: "Malachi Lensing",
       profession: "Marketing Manager",
       content:
-        "I’ve wanted a MacBook for a while now because of the build quality and the simplicity of the OS. I spend an average of 6 hours a day using it for college, and the battery still has a fair amount of charge left.",
+        "I’ve wanted a MacBook for a while. Excellent build quality, simplicity, and battery life.",
     },
     {
       name: "Christian Isla",
       profession: "Android Developer",
       content:
-        "This MacBook has excellent processing speed. The screen is crystal clear, and I really enjoy the touch bar. I set up the fingerprint reader.",
+        "This MacBook has excellent speed, clear screen, and a useful touch bar.",
     },
     {
       name: "Lori Charles",
       profession: "Sales Manager",
       content:
-        "For the last 10 years, I have owned an old Gateway laptop. Although it was amazing and lasted me, it was time for an upgrade. I own an Apple phone, so I decided to look into a computer.",
+        "Owned an old Gateway laptop for 10 years. Time for an upgrade to Apple.",
     },
   ];
 
@@ -44,12 +43,26 @@ const TestimonialSlider = () => {
     setRating(newRating);
   };
 
+  const imgtypes = [
+    "user",
+    "passport",
+    "cuteGirl",
+    "boy",
+    "girl",
+    "cute",
+    "cutepic",
+  ];
+
+  const getRandomImgType = () => {
+    return imgtypes[Math.floor(Math.random() * imgtypes.length)];
+  };
+
   return (
     <div className="items ">
       <div className="container-fluid bg-body-tertiary py-3">
         <div id="testimonialCarousel" className="carousel">
-          <AwesomeSlider>
-            <div className="carousel-inner ">
+          <div className="carousel-inner ">
+            <Marquee direction="left" speed={40}>
               {testimonials.map((item, index) => (
                 <div
                   className={`carousel-item ${index === 0 ? "active" : ""}`}
@@ -63,9 +76,8 @@ const TestimonialSlider = () => {
                       <p className="card-text">{item.content}</p>
                       <div className="d-flex align-items-center pt-2">
                         <img
-                          src={`https://source.unsplash.com/random/300×${
-                            index + 1
-                          }00/?user `}
+                          style={{ width: 80, height: 80 }}
+                          src={`https://source.unsplash.com/random/300×300/?${getRandomImgType()}&${index}`}
                           alt=""
                         />
                         <div>
@@ -86,16 +98,8 @@ const TestimonialSlider = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </AwesomeSlider>
-          {/* <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button> */}
+            </Marquee>
+          </div>
         </div>
       </div>
     </div>

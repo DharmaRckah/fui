@@ -51,6 +51,7 @@ import brainStorming from "../../static/brainstorm.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import OurClient from "../OurClient";
 
 const SuperHeadingTextStyle = styled(Typography)({
   fontWeight: 400,
@@ -230,6 +231,12 @@ const SpacedText: React.FC<SpacedTextProps> = ({ text, color }) => {
   );
 };
 const TechHomeInto: React.FC = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   const [isOrderedHovered, setOrderedIsHovered] = useState<{
     [key: number]: boolean;
   }>({
@@ -488,11 +495,11 @@ const TechHomeInto: React.FC = () => {
             </Box>
           </HeaderContainer>
         </Box>
-        {/* <ImageTextLayout reversed={false} />
+        <ImageTextLayout reversed={false} />
         <br />
         <br />
         <ImageTextLayout reversed={true} />
-        <br /> */}
+        <br />
         <br />
         <ImageTextLayout reversed={false} />
 
@@ -1136,360 +1143,323 @@ const TechHomeInto: React.FC = () => {
                   </Box>
                 </Grid>
               </Grid>
-              <Grid container sx={{ paddingTop: "80px" }} spacing={1}>
-                <Grid item md={4} xs={12}>
-                  <Box
-                    onMouseLeave={() => setonMouseLeave(7)}
-                    onMouseEnter={() => setonMouseEnter(7)}
-                    sx={{
-                      height: "345px",
-                      overflow: "hidden",
-                      display: "flex",
-                    }}
-                  >
+
+              {showMore && (
+                <Grid container sx={{ paddingTop: "80px" }} spacing={1}>
+                  <Grid item md={4} xs={12}>
                     <Box
+                      onMouseLeave={() => setonMouseLeave(7)}
+                      onMouseEnter={() => setonMouseEnter(7)}
                       sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
+                        height: "345px",
+                        overflow: "hidden",
+                        display: "flex",
                       }}
                     >
                       <Box
-                        className=""
                         sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
-                          height: "inherit",
-                          paddingLeft: "20px",
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
                         }}
                       >
-                        <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
-                        </Box>
                         <Box
+                          className=""
                           sx={{
                             display: "flex",
-                            justifyContent: "center",
                             flexDirection: "column",
+                            justifyContent: "space-between",
+                            height: "inherit",
+                            paddingLeft: "20px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              position: "relative",
-                              bottom: isOrderedHovered[7] ? "10%" : "-65%",
-                              transition:
-                                "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
-                            }}
-                          >
-                            <Typography
-                              sx={{
-                                fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
-                                transition: "font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              CRM/ERP
-                            </Typography>
-                            <Box
-                              sx={{
-                                opacity: isOrderedHovered[7] ? "1" : "0",
-                                fontSize: "12px",
-                                transition:
-                                  "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
-                            </Box>
+                          <Box sx={{ paddingTop: "20px" }}>
+                            <img src={infoIcon} alt="" srcSet="" />
                           </Box>
                           <Box
                             sx={{
-                              fontFamily: "'Bebas Neue', sans-serif",
                               display: "flex",
-                              justifyContent: "flex-start",
-                              alignItems: "center",
-                              gap: "10px",
-                              fontSize: "14px",
+                              justifyContent: "center",
+                              flexDirection: "column",
                             }}
                           >
-                            EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            <Box
+                              sx={{
+                                position: "relative",
+                                bottom: isOrderedHovered[7] ? "10%" : "-65%",
+                                transition:
+                                  "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontFamily: "'Bebas Neue', sans-serif",
+                                  fontSize: "28px",
+                                  transition: "font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                CRM/ERP
+                              </Typography>
+                              <Box
+                                sx={{
+                                  opacity: isOrderedHovered[7] ? "1" : "0",
+                                  fontSize: "12px",
+                                  transition:
+                                    "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                We make custom ERP/CRM development, which we
+                                develop and deliver for your business as per
+                                requirements and to help you grow your business
+                                exponentially by automating all your recurring
+                                tasks.
+                              </Box>
+                            </Box>
+                            <Box
+                              sx={{
+                                fontFamily: "'Bebas Neue', sans-serif",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: "10px",
+                                fontSize: "14px",
+                              }}
+                            >
+                              EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            </Box>
                           </Box>
                         </Box>
                       </Box>
+                      <Box
+                        sx={{
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                          backgroundImage: `url(${superComputer})`,
+                        }}
+                      ></Box>
                     </Box>
+                  </Grid>
+                  <Grid item md={4} xs={12}>
                     <Box
+                      onMouseLeave={() => setonMouseLeave(8)}
+                      onMouseEnter={() => setonMouseEnter(8)}
                       sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        backgroundImage: `url(${superComputer})`,
-                      }}
-                    ></Box>
-                  </Box>
-                </Grid>
-                <Grid item md={4} xs={12}>
-                  <Box
-                    onMouseLeave={() => setonMouseLeave(8)}
-                    onMouseEnter={() => setonMouseEnter(8)}
-                    sx={{
-                      height: "345px",
-                      overflow: "hidden",
-                      display: "flex",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
+                        height: "345px",
+                        overflow: "hidden",
+                        display: "flex",
                       }}
                     >
                       <Box
-                        className=""
                         sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
-                          height: "inherit",
-                          paddingLeft: "20px",
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
                         }}
                       >
-                        <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
-                        </Box>
                         <Box
+                          className=""
                           sx={{
                             display: "flex",
-                            justifyContent: "center",
                             flexDirection: "column",
+                            justifyContent: "space-between",
+                            height: "inherit",
+                            paddingLeft: "20px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              position: "relative",
-                              bottom: isOrderedHovered[8] ? "10%" : "-65%",
-                              transition:
-                                "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
-                            }}
-                          >
-                            <Typography
-                              sx={{
-                                fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
-                                transition: "font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              CRM/ERP
-                            </Typography>
-                            <Box
-                              sx={{
-                                opacity: isOrderedHovered[8] ? "1" : "0",
-                                fontSize: "12px",
-                                transition:
-                                  "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
-                            </Box>
+                          <Box sx={{ paddingTop: "20px" }}>
+                            <img src={infoIcon} alt="" srcSet="" />
                           </Box>
                           <Box
                             sx={{
-                              fontFamily: "'Bebas Neue', sans-serif",
                               display: "flex",
-                              justifyContent: "flex-start",
-                              alignItems: "center",
-                              gap: "10px",
-                              fontSize: "14px",
+                              justifyContent: "center",
+                              flexDirection: "column",
                             }}
                           >
-                            EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            <Box
+                              sx={{
+                                position: "relative",
+                                bottom: isOrderedHovered[8] ? "10%" : "-65%",
+                                transition:
+                                  "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontFamily: "'Bebas Neue', sans-serif",
+                                  fontSize: "28px",
+                                  transition: "font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                CRM/ERP
+                              </Typography>
+                              <Box
+                                sx={{
+                                  opacity: isOrderedHovered[8] ? "1" : "0",
+                                  fontSize: "12px",
+                                  transition:
+                                    "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                We make custom ERP/CRM development, which we
+                                develop and deliver for your business as per
+                                requirements and to help you grow your business
+                                exponentially by automating all your recurring
+                                tasks.
+                              </Box>
+                            </Box>
+                            <Box
+                              sx={{
+                                fontFamily: "'Bebas Neue', sans-serif",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: "10px",
+                                fontSize: "14px",
+                              }}
+                            >
+                              EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            </Box>
                           </Box>
                         </Box>
                       </Box>
+                      <Box
+                        sx={{
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                          backgroundImage: `url(${futuristicCity})`,
+                        }}
+                      ></Box>
                     </Box>
+                  </Grid>
+                  <Grid item md={4} xs={12}>
                     <Box
+                      onMouseLeave={() => setonMouseLeave(9)}
+                      onMouseEnter={() => setonMouseEnter(9)}
                       sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        backgroundImage: `url(${futuristicCity})`,
-                      }}
-                    ></Box>
-                  </Box>
-                </Grid>
-                <Grid item md={4} xs={12}>
-                  <Box
-                    onMouseLeave={() => setonMouseLeave(9)}
-                    onMouseEnter={() => setonMouseEnter(9)}
-                    sx={{
-                      height: "345px",
-                      overflow: "hidden",
-                      display: "flex",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
+                        height: "345px",
+                        overflow: "hidden",
+                        display: "flex",
                       }}
                     >
                       <Box
-                        className=""
                         sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
-                          height: "inherit",
-                          paddingLeft: "20px",
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
                         }}
                       >
-                        <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
-                        </Box>
                         <Box
+                          className=""
                           sx={{
                             display: "flex",
-                            justifyContent: "center",
                             flexDirection: "column",
+                            justifyContent: "space-between",
+                            height: "inherit",
+                            paddingLeft: "20px",
                           }}
                         >
-                          <Box
-                            sx={{
-                              position: "relative",
-                              bottom: isOrderedHovered[9] ? "10%" : "-65%",
-                              transition:
-                                "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
-                            }}
-                          >
-                            <Typography
-                              sx={{
-                                fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
-                                transition: "font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              CRM/ERP
-                            </Typography>
-                            <Box
-                              sx={{
-                                opacity: isOrderedHovered[9] ? "1" : "0",
-                                fontSize: "12px",
-                                transition:
-                                  "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
-                              }}
-                            >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
-                            </Box>
+                          <Box sx={{ paddingTop: "20px" }}>
+                            <img src={infoIcon} alt="" srcSet="" />
                           </Box>
                           <Box
                             sx={{
-                              fontFamily: "'Bebas Neue', sans-serif",
                               display: "flex",
-                              justifyContent: "flex-start",
-                              alignItems: "center",
-                              gap: "10px",
-                              fontSize: "14px",
+                              justifyContent: "center",
+                              flexDirection: "column",
                             }}
                           >
-                            EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            <Box
+                              sx={{
+                                position: "relative",
+                                bottom: isOrderedHovered[9] ? "10%" : "-65%",
+                                transition:
+                                  "bottom 0.5s ease-in-out, opacity 0.5s ease-in-out",
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontFamily: "'Bebas Neue', sans-serif",
+                                  fontSize: "28px",
+                                  transition: "font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                CRM/ERP
+                              </Typography>
+                              <Box
+                                sx={{
+                                  opacity: isOrderedHovered[9] ? "1" : "0",
+                                  fontSize: "12px",
+                                  transition:
+                                    "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
+                                }}
+                              >
+                                We make custom ERP/CRM development, which we
+                                develop and deliver for your business as per
+                                requirements and to help you grow your business
+                                exponentially by automating all your recurring
+                                tasks.
+                              </Box>
+                            </Box>
+                            <Box
+                              sx={{
+                                fontFamily: "'Bebas Neue', sans-serif",
+                                display: "flex",
+                                justifyContent: "flex-start",
+                                alignItems: "center",
+                                gap: "10px",
+                                fontSize: "14px",
+                              }}
+                            >
+                              EXPLORE MORE <ArrowRightAltIcon />{" "}
+                            </Box>
                           </Box>
                         </Box>
                       </Box>
+                      <Box
+                        sx={{
+                          height: "100%",
+                          width: "50%",
+                          backgroundColor: "#152E3A",
+                          color: "white",
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                          backgroundImage: `url(${sem})`,
+                        }}
+                      ></Box>
                     </Box>
-                    <Box
-                      sx={{
-                        height: "100%",
-                        width: "50%",
-                        backgroundColor: "#152E3A",
-                        color: "white",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        backgroundImage: `url(${sem})`,
-                      }}
-                    ></Box>
-                  </Box>
+                  </Grid>
                 </Grid>
-              </Grid>
+              )}
+              <div
+                style={{
+                  textAlign: "end",
+                  color: "white",
+                  margin: "0 1em",
+                  fontSize: "1.5em",
+                  cursor: "pointer", // Add cursor pointer to indicate clickable element
+                }}
+                onClick={handleShowMore}
+              >
+                {showMore ? "show less" : "show more"}
+              </div>
             </Box>
           </Box>
         </Box>
-        <Box
-          sx={{
-            paddingLeft: "163px",
-            paddingRight: "163px",
-            paddingTop: "100px",
-            background: "#0B1D26",
-          }}
-        >
-          <Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <SuperHeadingText text="Our Client"></SuperHeadingText>
-              <CustomText
-                text="We’re trusted by some of the world’s most recognizable brands."
-                lineHeight="25px"
-                size="20px"
-              ></CustomText>
-            </Box>
-            <Box>
-              <Container>
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: "40px",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                    paddingTop: "50px",
-                  }}
-                >
-                  <ClientImage src={clientTesla}></ClientImage>
-                  <ClientImage src={clientGoogle}></ClientImage>
-                  <ClientImage src={clientMeta}></ClientImage>
-                  <ClientImage src={clientNetflix}></ClientImage>
-                  <ClientImage src={clientAmazon}></ClientImage>
-                  <ClientImage src={clientSpotify}></ClientImage>
-                  <ClientImage src={clientTesla}></ClientImage>
-                  <ClientImage src={clientGoogle}></ClientImage>
-                  <ClientImage src={clientMeta}></ClientImage>
-                  <ClientImage src={clientNetflix}></ClientImage>
-                  <ClientImage src={clientAmazon}></ClientImage>
-                  <ClientImage src={clientSpotify}></ClientImage>
-                  <ClientImage src={clientBloomberg}></ClientImage>
-                  <ClientImage src={clientMicrosoft}></ClientImage>
-                  <ClientImage src={clientAdobe}></ClientImage>
-                </Box>
-              </Container>
-            </Box>
-          </Box>
-        </Box>
+
+        <OurClient bg="tranparent" />
+
         <Box
           sx={{
             paddingLeft: "163px",

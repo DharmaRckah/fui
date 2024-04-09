@@ -9,6 +9,7 @@ import s3 from "../assets/s3.webp";
 import s4 from "../assets/s4.webp";
 import s5 from "../assets/s5.jpg";
 import s6 from "../assets/s6.jpg";
+import Marquee from "react-fast-marquee";
 
 const responsive = {
   desktop: {
@@ -35,7 +36,7 @@ const styles = {
     padding: "0",
   },
   image: {
-    width: "100%",
+    width: "20em",
     borderRadius: "1px",
     height: "15rem",
   },
@@ -61,24 +62,14 @@ const HeroEnergy = () => {
       <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-14  text-dark m-0 ">
         <div className="col-md-8 mx-md-1 row justify-content-start align-items-center overflow-x-scroll scrollbar-hidden flex-nowrap">
           <div className="parent text-white">
-            <Carousel
-              responsive={responsive}
-              autoPlay={true}
-              swipeable={true}
-              draggable={true}
-              showDots={true}
-              infinite={true}
-              partialVisible={false}
-              dotListClass="custom-dot-list-style"
-              customDot={<CustomDot />}
-            >
+            <Marquee direction="left" speed={40}>
               {sliderImageUrl.map((imageUrl, index) => (
                 <div className="slider" key={index} style={styles.slider}>
                   <img src={imageUrl.url} alt="slider" style={styles.image} />
                   <p className="text-white overimg ">{imageUrl.heading}</p>
                 </div>
               ))}
-            </Carousel>
+            </Marquee>
           </div>
         </div>
 

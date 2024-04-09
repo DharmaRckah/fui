@@ -35,10 +35,10 @@
   .awssld__wrapper {
     height: 40vh !important;
   }
-  
-.react-multi-carousel-list  {
-  margin-left: 1.5em;
-}
+
+  .react-multi-carousel-list {
+    margin-left: 1.5em;
+  }
 }
 
 .awssld__content {
@@ -54,7 +54,7 @@
   min-width: min-content;
   background-size: cover;
   padding: 25px;
-  background-position: 0em -24em ;
+  background-position: 0em -24em;
   background-attachment: fixed;
   border-radius: 0 !important ;
 }
@@ -75,14 +75,14 @@
 .card.bg-dark.text-white.flex.img-fluid {
   position: relative;
 }
-.mbr-img-wrap{
+.mbr-img-wrap {
   align-items: center;
   justify-content: center;
   display: flex;
   min-width: min-content;
   background-size: cover;
   padding: 25px;
-  background-position: 0em -24em ;
+  background-position: 0em -24em;
   /* background-attachment: fixed; */
   border-radius: 0 !important ;
 }

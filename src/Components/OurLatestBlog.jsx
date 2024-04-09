@@ -43,32 +43,7 @@ const OurLatestBlog = () => {
         <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
-              className=" h-full w-full object-cover"
-              src="https://media.istockphoto.com/id/1608210815/photo/wind-farming.jpg?s=2048x2048&w=is&k=20&c=WS0LdvzH3PVYeBr6TgTGfsnQc0ElDwQMH97xLphgWTo="
-              alt="2s"
-            />
-          </div>
-          <p className="mt-2 font-semibold">
-            Lorem ipsum dolor sit <br /> amet, conse ct etur.
-          </p>
-          <p className="text-[0.8rem] mt-1">
-            Let's delve into trends shaping the 2024 job market with drawing
-            insights from layoff of 2023 and explore the skills and experiences
-            that are most in demand.
-          </p>
-
-          <div className="flex items-center gap-1">
-            <Link className="underline">Read Story</Link>
-            <p className="mt-2">
-              <FaArrowRight />
-            </p>
-          </div>
-        </div>
-
-        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
-          <div className="h-[50%] w-full bg-blue-400">
-            <img
-              className=" h-full w-full object-cover"
+              className=" w-full object-cover"
               src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
@@ -93,8 +68,8 @@ const OurLatestBlog = () => {
         <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
-              className=" h-full w-full object-cover"
-              src="https://media.istockphoto.com/id/1288967558/photo/low-angle-view-of-technician-walks-with-investor-through-field-of-solar-panels-alternative.jpg?s=2048x2048&w=is&k=20&c=Zj2hlQnrw-y6u6Sb9uM38eZfKbIIAEYpRF3JKU0SO3E="
+              className=" w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
           </div>
@@ -118,8 +93,8 @@ const OurLatestBlog = () => {
         <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
-              className=" h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1595437193398-f24279553f4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjB3aW5kfGVufDB8fDB8fHww"
+              className=" w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
           </div>
@@ -143,8 +118,8 @@ const OurLatestBlog = () => {
         <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
-              className=" h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1596786436253-ebfe4360282d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvbGFyJTIwd2luZHxlbnwwfHwwfHx8MA%3D%3D"
+              className=" w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
           </div>
@@ -168,8 +143,33 @@ const OurLatestBlog = () => {
         <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
           <div className="h-[50%] w-full bg-blue-400">
             <img
-              className=" h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1472313420546-a46e561861d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvbGFyJTIwd2luZHxlbnwwfHwwfHx8MA%3D%3D"
+              className=" w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
+              alt=""
+            />
+          </div>
+          <p className="mt-2 font-semibold">
+            Lorem ipsum dolor sit <br /> amet, conse ct etur.
+          </p>
+          <p className="text-[0.8rem] mt-1">
+            Let's delve into trends shaping the 2024 job market with drawing
+            insights from layoff of 2023 and explore the skills and experiences
+            that are most in demand.
+          </p>
+
+          <div className="flex items-center gap-1">
+            <Link className="underline">Read Story</Link>
+            <p className="mt-2">
+              <FaArrowRight />
+            </p>
+          </div>
+        </div>
+
+        <div className="md: md:w-[25%] w-[75%] bg-blue-200 p-3 child-item">
+          <div className="h-[50%] w-full bg-blue-400">
+            <img
+              className=" w-full object-cover"
+              src="https://media.istockphoto.com/id/1353364940/photo/modern-windmill-in-wide-field-closeup-energy-efficiency.jpg?s=2048x2048&w=is&k=20&c=bAjjk9-DUFgxR795vSMz9roOkYteL8HB-lEJr6M_wMQ="
               alt=""
             />
           </div>

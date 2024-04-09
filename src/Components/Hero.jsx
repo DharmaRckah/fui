@@ -37,9 +37,9 @@ const Hero = () => {
       {/* <OurStrategyImage /> */}
       <OurClient />
       <Readmore />
-      <ReviewSlider />
+      {/* <ReviewSlider /> */}
       <OurLatestBlog />
-      <TestimonialSlider/>
+      <TestimonialSlider />
       <NewsLetter />
       <Footer />
     </div>

@@ -7,6 +7,7 @@ import s3 from "../assets/s3.webp";
 import s4 from "../assets/s4.webp";
 import s5 from "../assets/s5.jpg";
 import s6 from "../assets/s6.jpg";
+import Marquee from "react-fast-marquee";
 
 const responsive = {
   desktop: {
@@ -30,12 +31,12 @@ const styles = {
   slider: {
     margin: "0",
     overflow: "hidden",
-    padding: "0rem 0",
+    padding: "0rem 0rem",
   },
   image: {
-    width: "97%",
+    width: "95%",
     borderRadius: "1px",
-    height: "20rem",
+    height: "35rem",
   },
   dotButton: {
     border: "none",
@@ -71,11 +72,13 @@ const ReactProject = () => {
         dotListClass="custom-dot-list-style"
         customDot={<CustomDot />}
       >
+        {/* <Marquee direction="left" speed={40} > */}
         {sliderImageUrl.map((imageUrl, index) => (
-          <div className="slider" key={index} style={styles.slider}>
+          <div className="slider " key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />
           </div>
         ))}
+        {/* </Marquee> */}
       </Carousel>
     </div>
   );
