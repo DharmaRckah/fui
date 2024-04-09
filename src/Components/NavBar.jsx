@@ -22,7 +22,7 @@ const Navbar = ({ backgroundColor }) => {
         </div>
       </Link>
 
-      <div className="hidden md:flex items-center gap-9  ml-[30%] text-md font-Montserrat">
+      <div className="hidden md:flex items-center  gap-9  ml-[30%] text-md font-Montserrat">
         <p>Media</p>
         <Link to="/contact">
           <p>Contact us</p>
@@ -81,7 +81,7 @@ const Navbar = ({ backgroundColor }) => {
 
       {/* Mobile menu overlay using conditional rendering */}
       <div
-        className={`absolute top-0 left-0 bg-[rgba(0,0,0,0.9)] w-full text-white md:hidden ${
+        className={`absolute top-0 z-10 left-0 bg-[rgba(0,0,0,0.9)] w-full text-white md:hidden ${
           isOpen
             ? "h-screen"
             : "h-0 overflow-hidden transition-all duration-300 ease-in-out"
