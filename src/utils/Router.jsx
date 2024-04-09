@@ -5,6 +5,7 @@ import App from "../App";
 import Contact from "../Components/Contact";
 import { AboutUs } from "../Components/AboutUs";
 import Blog from "../Components/tech/Blog";
+import BlogDetails from "../Components/tech/BlogDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
   },
   { path: "/about-us", element: <AboutUs /> },
   { path: "/blog", element: <Blog /> },
+  { path: "/blog/blog-details", element: <BlogDetails /> },
 ]);
 
 export default router;

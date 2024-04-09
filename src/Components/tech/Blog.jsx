@@ -3,8 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../Footer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { blue, cyan } from "@mui/material/colors";
 const Blog = () => {
   const images = [
     "https://www.nakheel.com/images/nakheelcorporatelibraries/spotlight/new-launches/tilal-al-furjan_1.jpg?sfvrsn=b21dafa6_1",
@@ -116,21 +116,25 @@ const Blog = () => {
             benchmarks in global living.
           </p>
 
-          <div className="pl-6 pr-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="pl-6 pr-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 xl:grid-cols-4 2xl:grid-cols-6 ">
             {cardImages.slice(0, numImages).map((image, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white rounded-md shadow-md overflow-hidden relative"
+                to={`/blog/blog-details?imagePath=${encodeURIComponent(image)}`} // Pass image path as query parameter
+                className="w-full"
               >
-                <div className="absolute bottom-6 left-0 right-0 bg-blue bg-opacity-50 text-white text-center py-2 text-3xl font-extrabold">
-                  {cardTexts[index]}
+                <div className="bg-white rounded-md shadow-md overflow-hidden relative h-full">
+                  <div className="absolute bottom-6 left-0 right-0 bg-blue bg-opacity-50 text-white text-center py-2 text-3xl font-extrabold">
+                    {cardTexts[index]}
+                  </div>
+                  <img
+                    src={image}
+                    alt={`Card ${index + 1}`}
+                    className="w-full h-100 object-cover"
+                    style={{ aspectRatio: "16/28" }} // Ensure all images have the same aspect ratio
+                  />
                 </div>
-                <img
-                  src={image}
-                  alt={`Card ${index + 1}`}
-                  className="w-full h-100 object-cover"
-                />
-              </div>
+              </Link>
             ))}
           </div>
           {numImages < cardImages.length && (
