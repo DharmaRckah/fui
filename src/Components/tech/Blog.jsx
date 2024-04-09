@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Footer from "../Footer";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Navbar from "../NavBar";
 const Blog = () => {
   const images = [
     "https://www.nakheel.com/images/nakheelcorporatelibraries/spotlight/new-launches/tilal-al-furjan_1.jpg?sfvrsn=b21dafa6_1",
@@ -86,6 +86,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+      <Navbar backgroundColor={"#152E3A"} />
       <div className="flex-grow">
         <Carousel
           showThumbs={false}

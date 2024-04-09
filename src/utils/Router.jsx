@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Infrastructure />,
   },
   {
-    path: "/infra",
+    path: "/infrastructure",
     element: <Infrastructure />,
   },
   {

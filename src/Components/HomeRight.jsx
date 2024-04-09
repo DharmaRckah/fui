@@ -19,7 +19,7 @@ const HomeRight = () => {
       {/* MOBILE BUTTON */}
       <div className="absolute top-[48%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 lg:hidden z-20">
         <button className="p-5 py-7  bg-[#64AEDF80] w-[87vw] md:w-[50vw] text-3xl text-white uppercase">
-          <Link to="/infra">Infrastructure</Link>
+          <Link to="/infrastructure">Infrastructure</Link>
         </button>
       </div>
 
