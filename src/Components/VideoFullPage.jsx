@@ -33,6 +33,7 @@ const VideoFullPage = () => {
         // autoPlay
         muted
         loop
+        controls={false}
         onClick={togglePlay}
         className="absolute inset-0 w-full h-full object-cover"
       ></video>
