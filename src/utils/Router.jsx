@@ -16,10 +16,7 @@ const router = createBrowserRouter([
     path: "/technology",
     element: <Technology />,
   },
-  {
-    path: "/infrastructure",
-    element: <Infrastructure />,
-  },
+ 
   {
     path: "/infrastructure",
     element: <Infrastructure />,

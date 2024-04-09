@@ -86,3 +86,11 @@
   /* background-attachment: fixed; */
   border-radius: 0 !important ;
 }
+
+.card-body {
+  width: 23em;
+}
+
+.card-text {
+  text-align: justify;
+}

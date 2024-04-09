@@ -9,10 +9,7 @@ const Footer = () => {
           src={logo}
           className="shrink-0 self-start max-w-full  aspect-[4] w-[6rem] h-[6rem]"
         />
-
-        <div className="flex flex-col flex-1 whitespace-nowrap pl-9"></div>
-        <div className="flex flex-col flex-1 text-base whitespace-nowrap pl-4"></div>
-        <div className="flex flex-col flex-1 text-base">
+        <div className="flex flex-col flex-1 text-base pl-12">
           <div className="justify-center py-3 font-medium text-white whitespace-nowrap leading-[110%]">
             Resources
           </div>
@@ -61,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 py-6 max-md:flex-wrap">
+      <div className="flex gap-4 py-6 max-md:flex-wrap sm:justify-content-between">
         <div className="flex-1  text-base  leading-5 text-slate-200 max-md:max-w-full m-auto">
           uteach @ 2023. All rights reserved.
         </div>
