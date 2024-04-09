@@ -1,7 +1,6 @@
 import styles from "./TechHomeIntoComponent.module.css";
 import mountains from "../../static/bg.png";
-import hiking from "../../static/hiking-gear.png";
-import earth from "../../static/earth.png";
+
 import laptop from "../../static/laptop.png";
 import logo from "../../assets/logo.png";
 import Footer from "../Footer";
@@ -317,28 +316,6 @@ const TechHomeInto: React.FC = () => {
         }}
       >
         <Grid container spacing={2}>
-          {reversed ? (
-            ""
-          ) : (
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              style={{
-                width: "30%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <img
-                src={earth}
-                alt="Sample Image"
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-            </Grid>
-          )}
-
           {/* Right column (Text) */}
           <Grid
             item
@@ -346,12 +323,6 @@ const TechHomeInto: React.FC = () => {
             sm={8}
             style={{ width: "60%", padding: 16, textAlign: "left" }}
           >
-            {/* <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            tristique enim ac lorem accumsan, vitae lacinia enim feugiat.
-                            Vivamus dignissim lorem vel est ullamcorper, quis aliquet nulla
-                            dapibus.
-                        </p> */}
             <SpacedText color="#FBD784" text={"GET STARTED"} />
             <br></br>
             <HeadingText
@@ -385,7 +356,7 @@ const TechHomeInto: React.FC = () => {
               }}
             >
               <img
-                src={earth}
+                src={laptop}
                 alt="Sample Image"
                 style={{ maxWidth: "100%", height: "auto" }}
               />
@@ -495,13 +466,8 @@ const TechHomeInto: React.FC = () => {
             </Box>
           </HeaderContainer>
         </Box>
-        <ImageTextLayout reversed={false} />
-        <br />
-        <br />
+
         <ImageTextLayout reversed={true} />
-        <br />
-        <br />
-        <ImageTextLayout reversed={false} />
 
         <Box sx={{ background: "#0B1D26" }}>
           <Box

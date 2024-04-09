@@ -9,21 +9,25 @@ const BlogDetails = () => {
 
   // Array of 8 random solar image URLs with "technology" appended
   const imageUrls = [
-    "https://source.unsplash.com/random/400x300?sig=1&technology",
+    "https://source.unsplash.com/random/400x300?sig=1&nature-solar",
     "https://source.unsplash.com/random/400x300?sig=2&technology",
-    "https://source.unsplash.com/random/400x300?sig=3&technology",
-    "https://source.unsplash.com/random/400x300?sig=4&technology",
-    "https://source.unsplash.com/random/400x300?sig=5&technology",
-    "https://source.unsplash.com/random/400x300?sig=6&technology",
-    "https://source.unsplash.com/random/400x300?sig=7&technology",
-    "https://source.unsplash.com/random/400x300?sig=8&technology",
+    "https://source.unsplash.com/random/400x300?sig=3&natur ",
+    "https://source.unsplash.com/random/400x300?sig=4&solar",
+    "https://source.unsplash.com/random/400x300?sig=5&solarpanel",
+    "https://source.unsplash.com/random/400x300?sig=6&tech",
+    "https://source.unsplash.com/random/400x300?sig=7&solar",
+    "https://source.unsplash.com/random/400x300?sig=8&nature",
   ];
 
   return (
     <>
       {imagePath && (
         <div className="container mx-auto">
-          <img src={imagePath} alt="Blog Image" className="w-full h-100" />
+          <img
+            src={imagePath}
+            alt="Blog Image"
+            className="w-full  xl:h-96 lg:h-96 sm:h-auto md:h-auto"
+          />
           <p>
             Spanning 395 hectares in total size, Greenwood presents a selection
             of plots to build your dream community with the Dubai skyline as

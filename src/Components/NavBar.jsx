@@ -12,7 +12,7 @@ const Navbar = ({ backgroundColor }) => {
 
   return (
     <nav
-      className={`h-[10vh] w-full text-white bg-[${backgroundColor}] flex justify-start items-center p-8 py-10 mt-3 cursor-pointer  ${
+      className={`h-[10vh] w-full text-white bg-[${backgroundColor}] flex justify-start items-center p-8 py-10  cursor-pointer  ${
         isOpen ? "bg-opacity-75" : ""
       }`}
     >
