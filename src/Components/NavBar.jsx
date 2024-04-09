@@ -108,13 +108,13 @@ const Navbar = ({ backgroundColor }) => {
         </button>
         <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8">
           <li onClick={toggleMenu}>
-            <p>Media</p>
+            <Link to="">Media</Link>
           </li>
           <li onClick={toggleMenu}>
-            <p>Contact Us</p>
+            <Link to="/contact">Contact Us</Link>
           </li>
           <li onClick={toggleMenu}>
-            <p>Blogs</p>
+            <Link to="/blog">Blogs</Link>
           </li>
         </ul>
       </div>
