@@ -1,3 +1,5 @@
+
+
 import styles from "./TechHomeIntoComponent.module.css";
 import mountains from "../../static/bg.png";
 
@@ -51,6 +53,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import OurClient from "../OurClient";
+import NewsLetter from "../NewsLetter";
 
 const SuperHeadingTextStyle = styled(Typography)({
   fontWeight: 400,
@@ -148,6 +151,7 @@ const CustomText: React.FC<CustomTextProps> = ({ text, size, lineHeight }) => {
   return (
     <Box>
       <Typography
+        className="text-justify"
         sx={{
           fontFamily: "'DM Sans', sans-serif",
           color: "white",
@@ -231,6 +235,11 @@ const SpacedText: React.FC<SpacedTextProps> = ({ text, color }) => {
 };
 const TechHomeInto: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for menu visibility
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleShowMore = () => {
     setShowMore(!showMore);
@@ -374,42 +383,139 @@ const TechHomeInto: React.FC = () => {
       <Box sx={{ position: "relative", background: "#0B1D26" }}>
         <Box
           sx={{
-            paddingTop: "51px",
-            paddingLeft: "70px",
-            paddingRight: "70px",
+            paddingTop: ["20px", "51px"],
+            paddingLeft: ["20px", "70px"],
+            paddingRight: ["20px", "70px"],
             backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(11, 29, 38, 1.0) 100%, rgba(11, 29, 38, 1.0) 100%), url(${mountains})`,
-            height: "120vh",
+            height: ["auto", "120vh"],
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
         >
           <HeaderContainer>
-            <Box>
-              <Grid container spacing={2}>
-                <Grid item md={5} sm={4}>
-                  <Link to="/">
-                    <Box>
-                      <img src={logo} alt={"logo"} className="w-24 h-auto" />
-                    </Box>
-                  </Link>
-                </Grid>
-                <Grid item md={7} sx={{ display: "flex" }} sm={8}>
-                  <NavBarContainer sx={{ cursor: "pointer", color: "white" }}>
-                    <Box>Explore</Box>
-                    <Box>
-                      <Link to="/about-us"> About Us</Link>
-                    </Box>
-                    <Box>Media</Box>
-                  </NavBarContainer>
-                </Grid>
+            <Grid container spacing={2}>
+              {/* Logo Grid Item */}
+              <Grid item xs={12} sm={4}>
+                {" "}
+                {/* Full width on mobile, 4 columns on tablet */}
+                <Link to="/">
+                  <img src={logo} alt="logo" className="w-25 h-auto" />
+                </Link>
               </Grid>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center", color: "white" }}>
+              {/* Navigation Grid Item - Only visible on Tablet and Desktop */}
+              <Grid
+                item
+                xs={0}
+                sm={8}
+                sx={{ display: { xs: "none", sm: "block" } }}
+              >
+                <NavBarContainer sx={{ cursor: "pointer", color: "white" }}>
+                  <Link to="/"> Explore</Link>
+                  <Box>
+                    <Link to="/about-us"> About Us</Link>
+                  </Box>
+                  <Link to="/"> Media</Link>
+                </NavBarContainer>
+              </Grid>
+            </Grid>
+
+            <button
+              className="md:hidden focus:outline-none flex items-center justify-center p-2 rounded-md mobile-btn "
+              style={{ position: "absolute", right: "9%" }}
+              onClick={toggleMenu}
+            >
+              {isOpen ? (
+                <svg
+                  className="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 18L18 6"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M6 6L18 18"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              )}
+            </button>
+            <div
+              className={`absolute top-0 z-10 left-0 bg-[rgba(0,0,0,0.9)] w-full text-white md:hidden ${
+                isOpen
+                  ? "h-screen"
+                  : "h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              }`}
+            >
+              <button
+                className="absolute top-4 right-4 text-white"
+                onClick={toggleMenu}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8">
+                <li onClick={toggleMenu}>
+                  <Link to="/">Explore</Link>
+                </li>
+                <li onClick={toggleMenu}>
+                  <Link to="/about-us">About Us</Link>
+                </li>
+                <li onClick={toggleMenu}>
+                  <Link to="/">Media</Link>
+                </li>
+              </ul>
+            </div>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: ["column", "row"],
+                alignItems: ["center", "flex-start"],
+                color: "white",
+              }}
+            >
               <Box
                 sx={{
                   display: "flex",
-                  gap: "30px",
-                  transform: "rotate(90deg)",
+                  flexDirection: ["row", "column"], // Stack icons vertically on mobile
+                  alignItems: "center",
+                  gap: ["30px", "0"], // Adjust gap for responsive design
+                  transform: ["none", "rotate(90deg)"], // Remove rotation on mobile
                 }}
               >
                 <Box
@@ -431,12 +537,12 @@ const TechHomeInto: React.FC = () => {
               <Box
                 sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
               >
-                <SpacedText color="#FBD784" text={"EVEREST TECHNOLOGY"} />
+                <SpacedText color="#FBD784" text="EVEREST TECHNOLOGY" />
                 <Box
                   sx={{
                     fontWeight: "400",
-                    fontSize: "63px",
-                    lineHeight: "71px",
+                    fontSize: ["28px", "63px"], // Adjust font size for responsive design
+                    lineHeight: ["32px", "71px"], // Adjust line height for responsive design
                     color: "white",
                     fontFamily: "'Playfair Display', serif",
                   }}
@@ -446,8 +552,8 @@ const TechHomeInto: React.FC = () => {
                 <Box
                   sx={{
                     fontWeight: "400",
-                    fontSize: "63px",
-                    lineHeight: "71px",
+                    fontSize: ["28px", "63px"], // Adjust font size for responsive design
+                    lineHeight: ["32px", "71px"], // Adjust line height for responsive design
                     color: "white",
                     fontFamily: "'Playfair Display', serif",
                   }}
@@ -471,11 +577,11 @@ const TechHomeInto: React.FC = () => {
 
         <Box sx={{ background: "#0B1D26" }}>
           <Box
-            sx={{
-              paddingLeft: "163px",
-              paddingRight: "163px",
-              paddingTop: "100px",
-            }}
+          // sx={{
+          //   paddingLeft: "163px",
+          //   paddingRight: "163px",
+          //   paddingTop: "100px",
+          // }}
           >
             <Box
               sx={{
@@ -1427,12 +1533,12 @@ const TechHomeInto: React.FC = () => {
         <OurClient bg="tranparent" />
 
         <Box
-          sx={{
-            paddingLeft: "163px",
-            paddingRight: "163px",
-            paddingTop: "100px",
-            background: "#0B1D26",
-          }}
+        // sx={{
+        //   paddingLeft: "163px",
+        //   paddingRight: "163px",
+        //   paddingTop: "100px",
+        //   background: "#0B1D26",
+        // }}
         >
           <Box
             sx={{
@@ -1455,7 +1561,7 @@ const TechHomeInto: React.FC = () => {
               <CustomText
                 text="We’re trusted by some of the world’s most recognizable brands."
                 lineHeight="25px"
-                size="20px"
+                size="1em"
               ></CustomText>
             </Box>
             <Box className="slider-avinash" sx={{ width: "100%" }}>
@@ -1481,20 +1587,7 @@ const TechHomeInto: React.FC = () => {
           </Box>
         </Box>
 
-        <div className=" h-[40%] md:h-[50%] lg:h-[6 0%] w-full bg-[#0B1D26] p-8 text-white text-center font-['Playfair Display', serif]">
-          <p className=" text-4xl ">Subscribe to Our Newsletter</p>
-          <p className=" mt-5 ">Get in touch for all new updates.</p>
-          <div className=" mt-14">
-            <input
-              type="text"
-              placeholder="Enter your email address"
-              className=" p-4 lg:w-[20vw] rounded-l-sm "
-            />
-            <button className="p-4 bg-[#FFA700] rounded-r-sm ">
-              Submit <FaArrowRight className="  inline-block" />
-            </button>
-          </div>
-        </div>
+        <NewsLetter />
         <Footer></Footer>
       </Box>
     </>
