@@ -203,7 +203,7 @@ const HomeLeft = () => {
           <div className=" flex items-center">
             <div className=" h-1 w-16 bg-[#FBD784] mt-2"></div>
             <p className=" text-md ml-10 mt-2 text-[#FBD784] uppercase">
-              Everest Technology
+              EIT Global
             </p>
           </div>
 

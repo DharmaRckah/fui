@@ -1,5 +1,3 @@
-
-
 import styles from "./TechHomeIntoComponent.module.css";
 import mountains from "../../static/bg.png";
 
@@ -336,13 +334,13 @@ const TechHomeInto: React.FC = () => {
             <br></br>
             <HeadingText
               color="#FFFFFF"
-              text={"Summit Excellence with Everest Technology"}
+              text={"Summit Excellence with EIT Global"}
             ></HeadingText>
             <br></br>
 
             <ParagraphText
               text={
-                "Everest Technology is inspired by the all mighty Mt Everest – highest peak in the world thrive to be leading IT services provider in the Middle East region and globally. Everest Technology is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, marketing strategies and industrial automation services."
+                "EIT Global is inspired by the all mighty Mt EIT – highest peak in the world thrive to be leading IT services provider in the Middle East region and globally. EIT Global is the partner of choice for many of the world’s leading enterprises, SMEs and technology challengers. We help businesses elevate their value through custom software development, marketing strategies and industrial automation services."
               }
             ></ParagraphText>
             <br></br>
@@ -537,7 +535,7 @@ const TechHomeInto: React.FC = () => {
               <Box
                 sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
               >
-                <SpacedText color="#FBD784" text="EVEREST TECHNOLOGY" />
+                <SpacedText color="#FBD784" text="EIT Global" />
                 <Box
                   sx={{
                     fontWeight: "400",

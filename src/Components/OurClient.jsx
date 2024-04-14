@@ -110,7 +110,7 @@ const OurClient = ({ bg = "white" }) => {
         infinite={true}
         partialVisible={false}
       > */}
-      <Marquee direction="right" speed={40} responsive={responsive}>
+      <Marquee direction="left" speed={40} responsive={responsive}>
         {sliderImageUrl.map((imageUrl, index) => (
           <div className="slider" key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />

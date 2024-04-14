@@ -34,9 +34,9 @@ const styles = {
     padding: "0rem 0rem",
   },
   image: {
-    width: "95%",
-    borderRadius: "1px",
+    width: "100%",
     height: "35rem",
+    objectFit: "cover", // Set object-fit to cover
   },
   dotButton: {
     border: "none",
@@ -50,20 +50,33 @@ const styles = {
 const sliderImageUrl = [
   { url: s1 },
   { url: s2 },
-  { url: s3 },
+
   { url: s3 },
   { url: s4 },
   { url: s5 },
   { url: s6 },
+  { url: s3 },
+  { url: s1 },
+  { url: s2 },
+
+  { url: s3 },
+  { url: s4 },
+  { url: s5 },
+  { url: s6 },
+  { url: s3 },
 ];
 
 const ReactProject = () => {
   return (
-    <div className="parent bg-white text-dark px-2 mt-md-4">
-      <h3 className="mx-4 fw-bold py-2  ">Our Recent Projects</h3>
+    <div className="parent bg-white text-dark px-2 mt-md-4 p-10">
+      <h2 className="mx-4  text-3xl font-bold  py-2 text-center mb-4">
+        Our Recent Projects
+      </h2>
       <Carousel
         responsive={responsive}
         autoPlay={true}
+        autoPlaySpeed={2000} // Adjust autoplay speed (milliseconds)
+        transitionDuration={3000} // Adjust transition duration (milliseconds)
         swipeable={true}
         draggable={true}
         showDots={true}
@@ -72,13 +85,11 @@ const ReactProject = () => {
         dotListClass="custom-dot-list-style"
         customDot={<CustomDot />}
       >
-        {/* <Marquee direction="left" speed={40} > */}
         {sliderImageUrl.map((imageUrl, index) => (
-          <div className="slider " key={index} style={styles.slider}>
+          <div className="slider mx-4 " key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />
           </div>
         ))}
-        {/* </Marquee> */}
       </Carousel>
     </div>
   );

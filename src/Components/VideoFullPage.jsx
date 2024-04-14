@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const VideoFullPage = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const VideoFullPage = () => {
       <video
         ref={videoRef}
         src={fullpageVido}
-        // autoPlay
+        autoPlay
         muted
         loop
         controls={false}

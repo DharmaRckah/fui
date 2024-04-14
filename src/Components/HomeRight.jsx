@@ -80,9 +80,7 @@ const HomeRight = () => {
         >
           <div className="flex items-center">
             <div className="h-1 w-16 bg-[#FBD784] mt-2"></div>
-            <p className="text-xl ml-10 mt-2 text-[#FBD784]">
-              Everest Technology
-            </p>
+            <p className="text-xl ml-10 mt-2 text-[#FBD784]">EIT Global</p>
           </div>
 
           <p className="text-4xl mt-5 mb-8 font-playfair">
