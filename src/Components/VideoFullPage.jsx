@@ -64,17 +64,17 @@ const VideoFullPage = () => {
         </div>
       </div>
       {/* Play/Pause button */}
-      <button
+      {/* <button
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-transparent border border-white rounded-full w-16 h-16 flex justify-center items-center"
         onClick={togglePlay}
       >
         {/* Conditional rendering of play/pause icon */}
-        {isPlaying ? (
+      {/* {isPlaying ? (
           <PiPauseDuotone className="text-white" size={24} />
         ) : (
           <IoPlay className="text-white" size={24} />
         )}
-      </button>
+      </button>  */}
     </div>
   );
 };

@@ -1,7 +1,6 @@
-
 import React from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
 
+import { FaArrowRight } from "react-icons/fa6";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import s1 from "../assets/s1.webp";
@@ -74,7 +73,7 @@ const sliderImageUrl = [
 const HeroEnergy = () => {
   return (
     <>
-      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-14  text-dark m-0 ">
+      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-16  text-dark m-0 ">
         <div className="col-md-8 mx-md-1 row justify-content-start align-items-start overflow-x-scroll scrollbar-hidden flex-nowrap">
           <div className="parent text-white">
             <Marquee direction="left" speed={40}>
@@ -89,17 +88,23 @@ const HeroEnergy = () => {
         </div>
 
         <div
-          className="h-auto lg:h-[35vh] col-md-3  row align-top"
+          className="h-auto lg:h-[35vh] col-md-3  row align-items-start "
           style={styles.textContainer}
         >
-          <div style={styles.bottomTextContainer}>
-            <p className="lg:font-bold lg:text-[1.4rem] lg:leading-6 font-bold text-[1.6rem] font-Montserrat text-center">
+          <div
+            style={styles.bottomTextContainer}
+            className="mt-16 lg:mt-[-24px]"
+          >
+            <p
+              style={{ fontFamily: "montserrat", lineHeight: "1.2" }}
+              className="md:font-bold lg:text-[1rem] lg:leading-6 font-bold italic font-Aleggra  font-Montserrat mr-5 "
+            >
               A Glimpse into Electric, Wind, and Solar Energy
             </p>
-            <br />
+
             <div></div>
             <div></div>
-            <p className="lg:text-[0.8rem] lg:leading-[1rem] font-Montserrat text-center">
+            <p className="lg:text-[0.9rem] lg:leading-[1rem] font-Montserrat text-left mt-3">
               EIT Global is inspired by the all mighty Mt Everest – highest peak
               in the world thrive to be leading IT services provider in the
               Middle East region and globally. eit global is the partner of
@@ -107,6 +112,27 @@ const HeroEnergy = () => {
               technology software development.
             </p>
           </div>
+          {/* /////////////////
+
+   <div className="h-auto lg:h-[35vh] col-md-3 row align-items-start">
+          <div style={styles.textContainer} className="mt-16 lg:mt-0">
+            <p
+              style={{ fontFamily: "montserrat", lineHeight: "1.2" }}
+              className="md:font-bold  font-bold font-Montserrat mr-5"
+            >
+              A Glimpse into Electric, Wind, and Solar Energy
+            </p>
+
+            <p className="lg:text-[0.8rem]  font-Montserrat text-left ">
+              EIT Global is inspired by the all mighty Mt Everest – highest peak
+              in the world thrive to be leading IT services provider in the
+              Middle East region and globally. eit global is the partner of
+              choice for many of the world’s leading enterprises, SMEs and
+              technology software development.
+            </p>
+          </div>
+//////////////////
+           */}
         </div>
       </div>
     </>

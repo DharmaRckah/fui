@@ -22,8 +22,10 @@ const Navbar = ({ backgroundColor }) => {
         </div>
       </Link>
 
-      <div className="hidden md:flex items-center  gap-9  ml-[30%] text-md font-Montserrat">
-        <p>Media</p>
+      <div className="hidden md:flex items-center  gap-9  ml-[30%] text-md font-Montserrat italic font-Aleggra">
+        <Link to="/technology">
+          <p>Technology</p>
+        </Link>
         <Link to="/contact">
           <p>Contact us</p>
         </Link>
@@ -106,9 +108,9 @@ const Navbar = ({ backgroundColor }) => {
             />
           </svg>
         </button>
-        <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8">
+        <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8 italic font-Aleggra">
           <li onClick={toggleMenu}>
-            <Link to="">Media</Link>
+            <Link to="/technology">Technology</Link>
           </li>
           <li onClick={toggleMenu}>
             <Link to="/contact">Contact Us</Link>

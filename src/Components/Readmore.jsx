@@ -23,7 +23,7 @@ const Readmore = () => {
 
         <div className="flex items-center">
           <div className="flex">
-            <button className="flex items-center px-3 py-2 bg-[rgba(28,124,172)] rounded-l-md text-sm md:text-xs">
+            <button className="flex items-center px-3 py-2 bg-[rgba(28,124,172)] text-white rounded-l-md text-sm md:text-xs">
               Read More
             </button>
             <button className="flex items-center px-4 py-2 bg-[rgba(32,157,218)] rounded-r-md">
@@ -32,8 +32,9 @@ const Readmore = () => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-[70%] mt-6 lg:mt-0">
-        <img src={image} alt="" className="h-full w-full object-cover" />
+      <div className="w-1/2 lg:w-[70%] mt-6 lg:mt-0 relative">
+        <img src={image} alt="" className="h-[532px] h-1/2 object-cover" />
+        <div className="absolute top-[548px] left-0 w-full h-[532px] bg-transparent pointer-events-none"></div>
       </div>
     </div>
   );

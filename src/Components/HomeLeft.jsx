@@ -134,10 +134,18 @@ const HomeLeft = () => {
       ></motion.div>
 
       {/** MOBILE BUTTON */}
-      <div className="absolute top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-20">
+      {/* <div className="absolute top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-20 shadow-md font-alegreya ">
         <button
           // onClick={() => console.log("Cliekde")}
-          className=" p-5 py-7 bg-[#64AEDF80] lg:hidden w-[87vw] md:w-[50vw] text-3xl text-white uppercase"
+          className=" p-5 shadow-md  py-7 bg-[#64AEDF80] lg:hidden w-[87vw] md:w-[50vw] text-3xl text-white uppercase"
+        >
+          <Link to="/technology">Technology</Link>
+        </button>
+      </div> */}
+      <div className="absolute top-[67%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-20 shadow-md font-alegreya italic">
+        <button
+          // onClick={() => console.log("Clicked")}
+          className="p-5 shadow-md py-7 bg-[#64AEDF80] lg:hidden w-[87vw] md:w-[50vw] text-3xl text-white uppercase"
         >
           <Link to="/technology">Technology</Link>
         </button>
@@ -174,7 +182,7 @@ const HomeLeft = () => {
               <motion.p
                 initial={{ marginLeft: leftbutton ? "0px" : "30px" }}
                 animate={{ marginLeft: leftbutton ? "0px" : "30px" }}
-                className=" ml-8"
+                className="shadow-md  ml-8"
               >
                 Technology
               </motion.p>

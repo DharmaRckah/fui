@@ -5,6 +5,13 @@
 /* // <uniquifier>: Use a unique and descriptive class name */
 /* // <weight>: Use a value from 100 to 1000 */
 
+@layer base {
+  .font-alegreya {
+    font-family: "Alegreya", serif;
+    font-style: italic;
+  }
+}
+
 .overimg {
   font-size: 1.4em;
   font-weight: bold;

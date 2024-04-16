@@ -88,7 +88,7 @@ const sliderImageUrl = [
 const OurClient = ({ bg = "white" }) => {
   return (
     <div
-      className="parent "
+      className="parent mx-8 px-8  "
       style={{ backgroundColor: bg, color: bg === "white" ? "black" : "white" }}
     >
       <style>
@@ -97,7 +97,9 @@ const OurClient = ({ bg = "white" }) => {
   }`}
       </style>
 
-      <h3 className="mx-4 h2 fw-bold py-2 text-center ">Our Clients </h3>
+      <h3 className="mx-4 h2 fw-bold py-2 text-center italic font-Aleggra ">
+        Our Clients{" "}
+      </h3>
       <p className="mx-4 fw-bold py-2  text-center">
         We’re trusted by some of the world’s most recognizable brands.{" "}
       </p>
@@ -112,7 +114,7 @@ const OurClient = ({ bg = "white" }) => {
       > */}
       <Marquee direction="left" speed={40} responsive={responsive}>
         {sliderImageUrl.map((imageUrl, index) => (
-          <div className="slider" key={index} style={styles.slider}>
+          <div className="slider " key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />
           </div>
         ))}

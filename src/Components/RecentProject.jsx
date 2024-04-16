@@ -1,12 +1,13 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import s1 from "../assets/s1.webp";
-import s2 from "../assets/s2.webp";
-import s3 from "../assets/s3.webp";
+import s1 from "../assets/a1.png";
+import s2 from "../assets/a2.png";
+import s3 from "../assets/a3.png";
 import s4 from "../assets/s4.webp";
-import s5 from "../assets/s5.jpg";
+
 import s6 from "../assets/s6.jpg";
+
 import Marquee from "react-fast-marquee";
 
 const responsive = {
@@ -52,24 +53,24 @@ const sliderImageUrl = [
   { url: s2 },
 
   { url: s3 },
-  { url: s4 },
-  { url: s5 },
-  { url: s6 },
+  { url: s1 },
+  { url: s3 },
+  { url: s2 },
   { url: s3 },
   { url: s1 },
   { url: s2 },
 
   { url: s3 },
-  { url: s4 },
-  { url: s5 },
-  { url: s6 },
+  { url: s1 },
+  { url: s3 },
+  { url: s2 },
   { url: s3 },
 ];
 
 const ReactProject = () => {
   return (
     <div className="parent bg-white text-dark px-2 mt-md-4 p-10">
-      <h2 className="mx-4  text-3xl font-bold  py-2 text-center mb-4">
+      <h2 className="mx-4  text-3xl font-bold  py-2 text-center mb-4 italic font-Aleggra">
         Our Recent Projects
       </h2>
       <Carousel
@@ -86,8 +87,17 @@ const ReactProject = () => {
         customDot={<CustomDot />}
       >
         {sliderImageUrl.map((imageUrl, index) => (
-          <div className="slider mx-4 " key={index} style={styles.slider}>
-            <img src={imageUrl.url} alt="slider" style={styles.image} />
+          <div
+            className="slider mx-4 h-auto  "
+            key={index}
+            style={styles.slider}
+          >
+            <img
+              src={imageUrl.url}
+              className="h-auto"
+              alt="slider"
+              style={styles.image}
+            />
           </div>
         ))}
       </Carousel>

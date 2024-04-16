@@ -406,13 +406,14 @@ const TechHomeInto: React.FC = () => {
                 xs={0}
                 sm={8}
                 sx={{ display: { xs: "none", sm: "block" } }}
+                className="italic font-Aleggra"
               >
                 <NavBarContainer sx={{ cursor: "pointer", color: "white" }}>
-                  <Link to="/"> Explore</Link>
+                  <Link to="/infrastructure">Infrastructure</Link>
                   <Box>
                     <Link to="/about-us"> About Us</Link>
                   </Box>
-                  <Link to="/"> Media</Link>
+                  <Link to="/blog"> Blog</Link>
                 </NavBarContainer>
               </Grid>
             </Grid>
@@ -487,15 +488,15 @@ const TechHomeInto: React.FC = () => {
                   />
                 </svg>
               </button>
-              <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8">
+              <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8 italic font-Aleggra">
                 <li onClick={toggleMenu}>
-                  <Link to="/">Explore</Link>
+                  <Link to="/infrastructure">Infrastructure</Link>
                 </li>
                 <li onClick={toggleMenu}>
                   <Link to="/about-us">About Us</Link>
                 </li>
                 <li onClick={toggleMenu}>
-                  <Link to="/">Media</Link>
+                  <Link to="/blog">Blog</Link>
                 </li>
               </ul>
             </div>
@@ -1531,12 +1532,12 @@ const TechHomeInto: React.FC = () => {
         <OurClient bg="tranparent" />
 
         <Box
-        // sx={{
-        //   paddingLeft: "163px",
-        //   paddingRight: "163px",
-        //   paddingTop: "100px",
-        //   background: "#0B1D26",
-        // }}
+          sx={{
+            paddingLeft: "163px",
+            paddingRight: "163px",
+            paddingTop: "100px",
+            background: "#0B1D26",
+          }}
         >
           <Box
             sx={{
