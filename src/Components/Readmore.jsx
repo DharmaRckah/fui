@@ -12,7 +12,10 @@ const Readmore = () => {
             between 45 and 50 <br />
             percent of global <br /> generation by 2030
           </p>
-          <p className="text-sm md:text-xs lg:text-bold text-left leading-normal mb-6 font-Montserrat lg:text-base/loose xl:text-base/loose">
+          <p
+            className="text-sm md:text-s lg:text-bold text-left leading-normal mb-6 font-Montserrat lg:text-base/loose xl:text-base/loose"
+            style={{ fontSize: "12px" }}
+          >
             This substantial uptick underscores the accelerating shift towards
             cleaner, more sustainable energy options. Factors driving this trend
             include advancements in technology, decreasing costs of renewable
@@ -32,9 +35,14 @@ const Readmore = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/2 lg:w-[70%] mt-6 lg:mt-0 relative">
-        <img src={image} alt="" className="h-[532px] h-1/2 object-cover" />
-        <div className="absolute top-[548px] left-0 w-full h-[532px] bg-transparent pointer-events-none"></div>
+      <div className="md:w-1/2 w-full lg:w-[70%] md:h-[50%] md:h-[50%] mt-6 lg:mt-0 relative">
+        <div className="relative">
+          <img
+            src={image}
+            alt=""
+            className="relative inset-0 w-full md:h-[400px] lg:h-[400px] object-cover"
+          />
+        </div>
       </div>
     </div>
   );

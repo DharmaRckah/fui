@@ -97,14 +97,14 @@ const HeroEnergy = () => {
           >
             <p
               style={{ fontFamily: "montserrat", lineHeight: "1.2" }}
-              className="md:font-bold lg:text-[1rem] lg:leading-6 font-bold italic font-Aleggra  font-Montserrat mr-5 "
+              className="md:font-bold lg:text-[1rem] lg:leading-6  font-bold italic font-Aleggra  font-Montserrat mr-5 "
             >
               A Glimpse into Electric, Wind, and Solar Energy
             </p>
 
             <div></div>
             <div></div>
-            <p className="lg:text-[0.9rem] lg:leading-[1rem] font-Montserrat text-left mt-3">
+            <p className="lg:text-[0.9rem] lg:leading-[1rem] sm:font-normal sm:text-[0.5rem] sm:leading-2 font-Montserrat text-left mt-3">
               EIT Global is inspired by the all mighty Mt Everest – highest peak
               in the world thrive to be leading IT services provider in the
               Middle East region and globally. eit global is the partner of
@@ -112,27 +112,6 @@ const HeroEnergy = () => {
               technology software development.
             </p>
           </div>
-          {/* /////////////////
-
-   <div className="h-auto lg:h-[35vh] col-md-3 row align-items-start">
-          <div style={styles.textContainer} className="mt-16 lg:mt-0">
-            <p
-              style={{ fontFamily: "montserrat", lineHeight: "1.2" }}
-              className="md:font-bold  font-bold font-Montserrat mr-5"
-            >
-              A Glimpse into Electric, Wind, and Solar Energy
-            </p>
-
-            <p className="lg:text-[0.8rem]  font-Montserrat text-left ">
-              EIT Global is inspired by the all mighty Mt Everest – highest peak
-              in the world thrive to be leading IT services provider in the
-              Middle East region and globally. eit global is the partner of
-              choice for many of the world’s leading enterprises, SMEs and
-              technology software development.
-            </p>
-          </div>
-//////////////////
-           */}
         </div>
       </div>
     </>

@@ -38,7 +38,7 @@ const Navbar = ({ backgroundColor }) => {
       {/* Hamburger menu button for mobile screens */}
       <button
         className="md:hidden focus:outline-none flex items-center justify-center p-2 rounded-md mobile-btn "
-        style={{ position: "relative", left: "50%" }}
+        style={{ position: "absolute", right: "4px" }}
         onClick={toggleMenu}
       >
         {isOpen ? (
