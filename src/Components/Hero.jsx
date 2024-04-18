@@ -28,7 +28,7 @@ const Hero = () => {
       }}
     >
       <div className="h-[100vh] w-[100%] bg-[rgba(0,0,0,0.7)]  overflow-y-hidden bg-gradient-to-b from-0B1D26 to-0B1D26">
-        <Navbar />
+        <Navbar backgroundColor={"#152E3A"} />
         <HeroText />
       </div>
       <HeroEnergy />

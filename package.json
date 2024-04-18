@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.0.6",
+    "google-translate-api": "^2.3.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "react": "^18.2.0",

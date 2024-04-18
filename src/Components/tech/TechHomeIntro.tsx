@@ -52,6 +52,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import OurClient from "../OurClient";
 import NewsLetter from "../NewsLetter";
+import Navbar from "../NavBar";
+import LeftNavbar from "./LeftNavbar";
 
 const SuperHeadingTextStyle = styled(Typography)({
   fontWeight: 400,
@@ -378,6 +380,10 @@ const TechHomeInto: React.FC = () => {
 
   return (
     <>
+      {" "}
+      <div className="  z-1000 overflow-y-hidden ">
+        <LeftNavbar backgroundColor={"#152E3A"} />
+      </div>
       <Box sx={{ position: "relative", background: "#0B1D26" }}>
         <Box
           sx={{
@@ -391,115 +397,6 @@ const TechHomeInto: React.FC = () => {
           }}
         >
           <HeaderContainer>
-            <Grid container spacing={2}>
-              {/* Logo Grid Item */}
-              <Grid item xs={12} sm={4}>
-                {" "}
-                {/* Full width on mobile, 4 columns on tablet */}
-                <Link to="/">
-                  <img src={logo} alt="logo" className="w-25 h-auto" />
-                </Link>
-              </Grid>
-              {/* Navigation Grid Item - Only visible on Tablet and Desktop */}
-              <Grid
-                item
-                xs={0}
-                sm={8}
-                sx={{ display: { xs: "none", sm: "block" } }}
-                className="italic font-Aleggra"
-              >
-                <NavBarContainer sx={{ cursor: "pointer", color: "white" }}>
-                  <Link to="/infrastructure">Infrastructure</Link>
-                  <Box>
-                    <Link to="/about-us"> About Us</Link>
-                  </Box>
-                  <Link to="/blog"> Blog</Link>
-                </NavBarContainer>
-              </Grid>
-            </Grid>
-
-            <button
-              className="md:hidden focus:outline-none flex items-center justify-center p-2 rounded-md mobile-btn "
-              style={{ position: "absolute", right: "9%" }}
-              onClick={toggleMenu}
-            >
-              {isOpen ? (
-                <svg
-                  className="w-8 h-8"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 18L18 6"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M6 6L18 18"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-8 h-8"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
-                    stroke="black"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              )}
-            </button>
-            <div
-              className={`absolute top-0 z-10 left-0 bg-[rgba(0,0,0,0.9)] w-full text-white md:hidden ${
-                isOpen
-                  ? "h-screen"
-                  : "h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              }`}
-            >
-              <button
-                className="absolute top-4 right-4 text-white"
-                onClick={toggleMenu}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <ul className="flex flex-col items-center gap-9 font-bold text-xl p-8 italic font-Aleggra">
-                <li onClick={toggleMenu}>
-                  <Link to="/infrastructure">Infrastructure</Link>
-                </li>
-                <li onClick={toggleMenu}>
-                  <Link to="/about-us">About Us</Link>
-                </li>
-                <li onClick={toggleMenu}>
-                  <Link to="/blog">Blog</Link>
-                </li>
-              </ul>
-            </div>
             <Box
               sx={{
                 display: "flex",
