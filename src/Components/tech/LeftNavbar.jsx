@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Lan from "../../Components/tech/Lan";
 import logo from "../../assets/logo.png";
 
 const LeftNavbar = ({ backgroundColor }) => {
@@ -16,12 +16,18 @@ const LeftNavbar = ({ backgroundColor }) => {
         isOpen ? "bg-opacity-75" : ""
       }`}
     >
+      {" "}
       <Link to="/">
         <div>
-          <img className=" py-3 " width={75} height={4} src={logo} alt="logo" />
+          <img
+            className=" py-3  p-1"
+            width={75}
+            height={4}
+            src={logo}
+            alt="logo"
+          />
         </div>
       </Link>
-
       <div className="hidden md:flex items-center  gap-9  ml-[30%] text-md font-Montserrat italic font-Aleggra">
         <Link to="/infrastructure">
           <p>Infrastructure</p>
@@ -33,8 +39,11 @@ const LeftNavbar = ({ backgroundColor }) => {
         <Link to="/blog">
           <p>Blogs</p>
         </Link>
+        <div className="mt-12">
+          {" "}
+          <Lan />
+        </div>
       </div>
-
       {/* Hamburger menu button for mobile screens */}
       <button
         className="md:hidden focus:outline-none flex items-center justify-center p-2 rounded-md mobile-btn "
@@ -80,7 +89,6 @@ const LeftNavbar = ({ backgroundColor }) => {
           </svg>
         )}
       </button>
-
       {/* Mobile menu overlay using conditional rendering */}
       <div
         className={`absolute top-0 z-10 left-0 bg-[rgba(0,0,0,0.9)] w-full text-white md:hidden ${

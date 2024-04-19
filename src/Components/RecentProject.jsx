@@ -193,7 +193,11 @@ const ReactProject = () => {
   };
 
   return (
-    <div className="parent bg-white text-dark px-2 mt-md-4 p-10">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      className="parent bg-white text-dark px-2 mt-md-4 p-10"
+    >
       <h2 className="mx-4  text-3xl font-bold  py-2 text-center mb-4 italic font-Aleggra">
         Our Recent Projects
       </h2>

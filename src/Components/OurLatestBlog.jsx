@@ -165,6 +165,7 @@ const OurLatestBlog = () => {
 
   return (
     <div
+      data-aos="zoom-out-down"
       className="h-h/2 w-full bg-inherit p-8 mb-4 flex flex-col relative"
       style={{ overflowY: "hidden" }}
     >

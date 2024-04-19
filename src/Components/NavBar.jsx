@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.png";
-
+import Lan from "../Components/tech/Lan";
 const Navbar = ({ backgroundColor }) => {
   const [isOpen, setIsOpen] = useState(false); // State for menu visibility
 
@@ -18,7 +18,13 @@ const Navbar = ({ backgroundColor }) => {
     >
       <Link to="/">
         <div>
-          <img className=" py-3 " width={75} height={4} src={logo} alt="logo" />
+          <img
+            className=" py-6 p-1   "
+            width={75}
+            height={4}
+            src={logo}
+            alt="logo"
+          />
         </div>
       </Link>
 
@@ -33,6 +39,11 @@ const Navbar = ({ backgroundColor }) => {
         <Link to="/blog">
           <p>Blogs</p>
         </Link>
+
+        <div className="mt-12">
+          {" "}
+          <Lan />
+        </div>
       </div>
 
       {/* Hamburger menu button for mobile screens */}

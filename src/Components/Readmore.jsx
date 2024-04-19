@@ -4,7 +4,11 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Readmore = () => {
   return (
-    <div className="flex flex-col lg:flex-row h-auto lg:h-[70vh] w-full bg-inherit text-black p-8 md:px-10 px-8 lg:px-10 lg:pt-[6rem]">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      className="flex flex-col lg:flex-row h-auto lg:h-[70vh] w-full bg-inherit text-black p-8 md:px-10 px-8 lg:px-10 lg:pt-[6rem]"
+    >
       <div className="lg:w-[25%] h-auto lg:h-[90%] flex flex-col justify-between">
         <div className="lg:text-base/loose xl:text-base/loose">
           <p className="font-bold text-lg md:text-base lg:text-base leading-normal md:leading-[1.3rem] lg:leading-[1.3rem] mb-5 font-Montserrat">
@@ -14,7 +18,7 @@ const Readmore = () => {
           </p>
           <p
             className="text-sm md:text-s lg:text-bold text-left leading-normal mb-6 font-Montserrat lg:text-base/loose xl:text-base/loose"
-            style={{ fontSize: "12px" }}
+            style={{ fontSize: "12px", paddingRight: "12px" }}
           >
             This substantial uptick underscores the accelerating shift towards
             cleaner, more sustainable energy options. Factors driving this trend
@@ -29,7 +33,7 @@ const Readmore = () => {
             <button className="flex items-center px-3 py-2 bg-[rgba(28,124,172)] text-white rounded-l-md text-sm md:text-xs">
               Read More
             </button>
-            <button className="flex items-center px-4 py-2 bg-[rgba(32,157,218)] rounded-r-md">
+            <button className="flex items-center px-4 py-2 bg-[rgba(32,157,218)] text-white rounded-r-md">
               <FaArrowRight className="h-full" />
             </button>
           </div>

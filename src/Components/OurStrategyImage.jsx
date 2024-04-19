@@ -1,12 +1,12 @@
 import React from "react";
-import imgae from "../assets/infrastructure/Our Sustainability Strategy.png";
+import imgae from "../assets/infrastructure/OurSustainabilityStrategy.png";
 
 const OurStrategyImage = () => {
   return (
     <div className=" h-[40vh] lg:h-[100vh]  bg-black p-8">
-      {/* <div className="h-full w-full">
+      <div className="h-full w-full">
         <img src={imgae} alt="" className=" h-full w-full object-contains" />
-      </div> */}
+      </div>
     </div>
   );
 };

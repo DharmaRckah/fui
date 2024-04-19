@@ -54,6 +54,8 @@ import OurClient from "../OurClient";
 import NewsLetter from "../NewsLetter";
 import Navbar from "../NavBar";
 import LeftNavbar from "./LeftNavbar";
+import TestimonialSlider from "../TestimonialSlider";
+import { Height } from "@mui/icons-material";
 
 const SuperHeadingTextStyle = styled(Typography)({
   fontWeight: 400,
@@ -473,11 +475,20 @@ const TechHomeInto: React.FC = () => {
 
         <Box sx={{ background: "#0B1D26" }}>
           <Box
-          // sx={{
-          //   paddingLeft: "163px",
-          //   paddingRight: "163px",
-          //   paddingTop: "100px",
-          // }}
+            sx={{
+              "@media screen and (min-width: 1024px)": {
+                paddingLeft: "175px",
+                paddingRight: "163px",
+                paddingTop: "100px",
+              },
+            }}
+            sx={{
+              "@media screen and (min-width: 768px)": {
+                paddingLeft: "152px",
+                paddingRight: "152px",
+                paddingTop: "100px",
+              },
+            }}
           >
             <Box
               sx={{
@@ -485,6 +496,8 @@ const TechHomeInto: React.FC = () => {
                 flexDirection: "column",
                 justifyContent: "flex-start",
                 gap: "10px",
+
+                alignItems: "left",
               }}
             >
               <SpacedText color="#FBD784" text={"TECHNOLOGY EXCELLENCE"} />
@@ -495,15 +508,15 @@ const TechHomeInto: React.FC = () => {
             </Box>
             {/* <Grid container spacing={4}>
                         <Grid item xs>
-                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "28px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
+                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "16px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
 
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "28px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
+                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "16px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
 
                         </Grid>
                         <Grid item xs>
-                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "28px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
+                            <Typography sx={{ color: "red", fontFamily: "'Bebas Neue', sans-serif", fontSize: "16px", transition: "font-size 0.5s ease-in-out" }}>111: CRM/ERP</Typography>
 
                         </Grid>
                     </Grid> */}
@@ -549,7 +562,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/10/application.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -569,11 +590,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              IOT | IIOT
                             </Typography>
                             <Box
                               sx={{
@@ -583,11 +604,12 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
+                              We cover the major industrial sectors providing
+                              high-end solutions for Agriculture, Energy,
+                              Manufacturing, Transport and Aero-Space.
+                              Remodelling in wide-ranging enterprise mobility
+                              solutions to provide progressive demand of modern
+                              business.
                             </Box>
                           </Box>
                           <Box
@@ -647,7 +669,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/10/applications.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -667,11 +697,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              Mobile App
                             </Typography>
                             <Box
                               sx={{
@@ -681,11 +711,10 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
+                              We offer a wide range of customised services in
+                              mobile apps, Android development, IoS development,
+                              AR-VR Development, Game Development, Blockchain
+                              Development and much more.
                             </Box>
                           </Box>
                           <Box
@@ -745,7 +774,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/10/digital-marketing.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -765,11 +802,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              AI based Digital Marketing
                             </Typography>
                             <Box
                               sx={{
@@ -779,11 +816,13 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
+                              Reimagine business with the digital impact. If
+                              you’re looking to build your brand and increase
+                              your revenue in the long run, we offer our
+                              data-centric and growth driven strategic approach
+                              for your audience. Employing our multi-channel
+                              digital strategies which maximises your efforts
+                              and budget.
                             </Box>
                           </Box>
                           <Box
@@ -845,7 +884,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/10/organization-structure.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -865,11 +912,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              CRM | ERP
                             </Typography>
                             <Box
                               sx={{
@@ -879,7 +926,7 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
+                              We make custom ERP|CRM development, which we
                               develop and deliver for your business as per
                               requirements and to help you grow your business
                               exponentially by automating all your recurring
@@ -943,7 +990,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/11/cyber-security.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -963,11 +1018,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              Cyber Security
                             </Typography>
                             <Box
                               sx={{
@@ -977,11 +1032,11 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
+                              Providing an extra level of defence against cyber
+                              threats. Managing Critical Infrastructure
+                              Cybersecurity, Network Security, Cloud Security,
+                              Internet of Things Security & Application
+                              Security.
                             </Box>
                           </Box>
                           <Box
@@ -1041,7 +1096,15 @@ const TechHomeInto: React.FC = () => {
                         }}
                       >
                         <Box sx={{ paddingTop: "20px" }}>
-                          <img src={infoIcon} alt="" srcSet="" />
+                          <img
+                            src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2021/11/cloud-1.png"
+                            alt=""
+                            srcSet=""
+                            style={{
+                              width: "50px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
                         </Box>
                         <Box
                           sx={{
@@ -1061,11 +1124,11 @@ const TechHomeInto: React.FC = () => {
                             <Typography
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                fontSize: "28px",
+                                fontSize: "16px",
                                 transition: "font-size 0.5s ease-in-out",
                               }}
                             >
-                              CRM/ERP
+                              Cloud Computing
                             </Typography>
                             <Box
                               sx={{
@@ -1075,11 +1138,9 @@ const TechHomeInto: React.FC = () => {
                                   "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                               }}
                             >
-                              We make custom ERP/CRM development, which we
-                              develop and deliver for your business as per
-                              requirements and to help you grow your business
-                              exponentially by automating all your recurring
-                              tasks.
+                              On-demand availability of computer system
+                              resources. We provide services in data storage,
+                              servers, database, networking and software.
                             </Box>
                           </Box>
                           <Box
@@ -1143,7 +1204,15 @@ const TechHomeInto: React.FC = () => {
                           }}
                         >
                           <Box sx={{ paddingTop: "20px" }}>
-                            <img src={infoIcon} alt="" srcSet="" />
+                            <img
+                              src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2022/11/goggles.png"
+                              alt=""
+                              srcSet=""
+                              style={{
+                                width: "50px",
+                                filter: "brightness(0) invert(1)",
+                              }}
+                            />
                           </Box>
                           <Box
                             sx={{
@@ -1163,11 +1232,11 @@ const TechHomeInto: React.FC = () => {
                               <Typography
                                 sx={{
                                   fontFamily: "'Bebas Neue', sans-serif",
-                                  fontSize: "28px",
+                                  fontSize: "16px",
                                   transition: "font-size 0.5s ease-in-out",
                                 }}
                               >
-                                CRM/ERP
+                                Metaverse Development
                               </Typography>
                               <Box
                                 sx={{
@@ -1177,11 +1246,12 @@ const TechHomeInto: React.FC = () => {
                                     "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                                 }}
                               >
-                                We make custom ERP/CRM development, which we
-                                develop and deliver for your business as per
-                                requirements and to help you grow your business
-                                exponentially by automating all your recurring
-                                tasks.
+                                Virtual reality is a technology that allows a
+                                user to carry out actions in a digital
+                                environment yet feel as if they are immersed in
+                                a physical environment. The purpose of VR is to
+                                enable a person to experience and manipulate the
+                                environment as if it were the real world.
                               </Box>
                             </Box>
                             <Box
@@ -1241,7 +1311,15 @@ const TechHomeInto: React.FC = () => {
                           }}
                         >
                           <Box sx={{ paddingTop: "20px" }}>
-                            <img src={infoIcon} alt="" srcSet="" />
+                            <img
+                              src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2022/11/blockchain-ic.png"
+                              alt=""
+                              srcSet=""
+                              style={{
+                                width: "50px",
+                                filter: "brightness(0) invert(1)",
+                              }}
+                            />
                           </Box>
                           <Box
                             sx={{
@@ -1261,11 +1339,11 @@ const TechHomeInto: React.FC = () => {
                               <Typography
                                 sx={{
                                   fontFamily: "'Bebas Neue', sans-serif",
-                                  fontSize: "28px",
+                                  fontSize: "16px",
                                   transition: "font-size 0.5s ease-in-out",
                                 }}
                               >
-                                CRM/ERP
+                                Blockchain Solutions
                               </Typography>
                               <Box
                                 sx={{
@@ -1275,11 +1353,13 @@ const TechHomeInto: React.FC = () => {
                                     "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                                 }}
                               >
-                                We make custom ERP/CRM development, which we
-                                develop and deliver for your business as per
-                                requirements and to help you grow your business
-                                exponentially by automating all your recurring
-                                tasks.
+                                The worldwide hype of bitcoin has shed light on
+                                the blockchain. Nonetheless, blockchain is way
+                                beyond bitcoin. It is the simplest and most
+                                secure method of tracking any transaction that
+                                uses revolutionary technology. It has the
+                                ability to make several aspects of our lives
+                                easier.
                               </Box>
                             </Box>
                             <Box
@@ -1339,7 +1419,15 @@ const TechHomeInto: React.FC = () => {
                           }}
                         >
                           <Box sx={{ paddingTop: "20px" }}>
-                            <img src={infoIcon} alt="" srcSet="" />
+                            <img
+                              src="https://cdn-jdanl.nitrocdn.com/amtoRwJraWOAvYVzkSGJXCOaqjBgZFsX/assets/images/optimized/rev-82ae7db/everestdg.com/wp-content/uploads/2023/04/ChatGPT-Logo-removebg-preview.png"
+                              alt=""
+                              srcSet=""
+                              style={{
+                                width: "50px",
+                                filter: "brightness(0) invert(1)",
+                              }}
+                            />
                           </Box>
                           <Box
                             sx={{
@@ -1359,11 +1447,11 @@ const TechHomeInto: React.FC = () => {
                               <Typography
                                 sx={{
                                   fontFamily: "'Bebas Neue', sans-serif",
-                                  fontSize: "28px",
+                                  fontSize: "16px",
                                   transition: "font-size 0.5s ease-in-out",
                                 }}
                               >
-                                CRM/ERP
+                                Chat GPT Alternatives
                               </Typography>
                               <Box
                                 sx={{
@@ -1373,11 +1461,12 @@ const TechHomeInto: React.FC = () => {
                                     "opacity 0.5s ease-in-out, font-size 0.5s ease-in-out",
                                 }}
                               >
-                                We make custom ERP/CRM development, which we
-                                develop and deliver for your business as per
-                                requirements and to help you grow your business
-                                exponentially by automating all your recurring
-                                tasks.
+                                There are several intelligent chat software
+                                options available in the market. Most of us have
+                                already heard about ChatGPT which is AI-powered
+                                chat software. However, do you know that ChatGPT
+                                has some limitations as well? For this reason,
+                                we should explore AI chat software alternatives.
                               </Box>
                             </Box>
                             <Box
@@ -1483,6 +1572,7 @@ const TechHomeInto: React.FC = () => {
           </Box>
         </Box>
 
+        <TestimonialSlider />
         <NewsLetter />
         <Footer></Footer>
       </Box>

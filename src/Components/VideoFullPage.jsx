@@ -25,7 +25,12 @@ const VideoFullPage = () => {
   };
 
   return (
-    <div className="relative h-screen flex justify-center items-center">
+    <div
+      // data-aos="flip-left"
+      // data-aos-easing="ease-out-cubic"
+      // data-aos-duration="2000"
+      className="relative h-screen flex justify-center items-center"
+    >
       {/* Video element */}
       <video
         ref={videoRef}

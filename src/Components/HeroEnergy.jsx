@@ -73,7 +73,10 @@ const sliderImageUrl = [
 const HeroEnergy = () => {
   return (
     <>
-      <div className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-16  text-dark m-0 ">
+      <div
+        data-aos="fade-right"
+        className="overflow-x-hidden overflow-y-hidden row col-md-12 bg-white flex flex-col lg:flex-row py-16  text-dark m-0 "
+      >
         <div className="col-md-8 mx-md-1 row justify-content-start align-items-start overflow-x-scroll scrollbar-hidden flex-nowrap">
           <div className="parent text-white">
             <Marquee direction="left" speed={40}>
@@ -97,7 +100,7 @@ const HeroEnergy = () => {
           >
             <p
               style={{ fontFamily: "montserrat", lineHeight: "1.2" }}
-              className="md:font-bold lg:text-[1rem] lg:leading-6  font-bold italic font-Aleggra  font-Montserrat mr-5 "
+              className="md:font-bold lg:text-[1rem] lg:leading-6  font-bold italic font-Aleggra  font-Montserrat mr-3 "
             >
               A Glimpse into Electric, Wind, and Solar Energy
             </p>
