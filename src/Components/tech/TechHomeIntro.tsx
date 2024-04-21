@@ -439,7 +439,12 @@ const TechHomeInto: React.FC = () => {
               </Box>
 
               <Box
-                sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
+                  paddingLeft: "180px",
+                }}
               >
                 <SpacedText color="#FBD784" text="EIT Global" />
                 <Box
@@ -448,7 +453,7 @@ const TechHomeInto: React.FC = () => {
                     fontSize: ["28px", "63px"],
                     lineHeight: ["32px", "71px"],
                     color: "white",
-                    textAlign: "center",
+                    textAlign: "right",
                     justifyContent: "center",
                     fontFamily: "'Playfair Display', serif",
                   }}
@@ -546,7 +551,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(1)}
                     onMouseEnter={() => setonMouseEnter(1)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -623,11 +628,11 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
-                              fontSize: "14px",
+                              fontSize: "12px",
                             }}
                           >
                             EXPLORE MORE <ArrowRightAltIcon />{" "}
@@ -653,7 +658,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(2)}
                     onMouseEnter={() => setonMouseEnter(2)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -728,7 +733,7 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+                              // display: "flex",
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
@@ -758,7 +763,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(3)}
                     onMouseEnter={() => setonMouseEnter(3)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -836,7 +841,7 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+                              // display: "flex",
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
@@ -868,7 +873,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(4)}
                     onMouseEnter={() => setonMouseEnter(4)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -944,7 +949,7 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+                              // display: "flex",
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
@@ -974,7 +979,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(5)}
                     onMouseEnter={() => setonMouseEnter(5)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -1050,7 +1055,7 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+                              // display: "flex",
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
@@ -1080,7 +1085,7 @@ const TechHomeInto: React.FC = () => {
                     onMouseLeave={() => setonMouseLeave(6)}
                     onMouseEnter={() => setonMouseEnter(6)}
                     sx={{
-                      height: "345px",
+                      height: "445px",
                       overflow: "hidden",
                       display: "flex",
                     }}
@@ -1154,7 +1159,7 @@ const TechHomeInto: React.FC = () => {
                           <Box
                             sx={{
                               fontFamily: "'Bebas Neue', sans-serif",
-                              display: "flex",
+                              // display: "flex",
                               justifyContent: "flex-start",
                               alignItems: "center",
                               gap: "10px",
@@ -1188,7 +1193,7 @@ const TechHomeInto: React.FC = () => {
                       onMouseLeave={() => setonMouseLeave(7)}
                       onMouseEnter={() => setonMouseEnter(7)}
                       sx={{
-                        height: "345px",
+                        height: "445px",
                         overflow: "hidden",
                         display: "flex",
                       }}
@@ -1265,7 +1270,7 @@ const TechHomeInto: React.FC = () => {
                             <Box
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                display: "flex",
+                                // display: "flex",
                                 justifyContent: "flex-start",
                                 alignItems: "center",
                                 gap: "10px",
@@ -1295,7 +1300,7 @@ const TechHomeInto: React.FC = () => {
                       onMouseLeave={() => setonMouseLeave(8)}
                       onMouseEnter={() => setonMouseEnter(8)}
                       sx={{
-                        height: "345px",
+                        height: "445px",
                         overflow: "hidden",
                         display: "flex",
                       }}
@@ -1373,7 +1378,7 @@ const TechHomeInto: React.FC = () => {
                             <Box
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                display: "flex",
+                                // display: "flex",
                                 justifyContent: "flex-start",
                                 alignItems: "center",
                                 gap: "10px",
@@ -1403,7 +1408,7 @@ const TechHomeInto: React.FC = () => {
                       onMouseLeave={() => setonMouseLeave(9)}
                       onMouseEnter={() => setonMouseEnter(9)}
                       sx={{
-                        height: "345px",
+                        height: "445px",
                         overflow: "hidden",
                         display: "flex",
                       }}
@@ -1480,7 +1485,7 @@ const TechHomeInto: React.FC = () => {
                             <Box
                               sx={{
                                 fontFamily: "'Bebas Neue', sans-serif",
-                                display: "flex",
+                                // display: "flex",
                                 justifyContent: "flex-start",
                                 alignItems: "center",
                                 gap: "10px",
@@ -1524,61 +1529,7 @@ const TechHomeInto: React.FC = () => {
         </Box>
 
         <OurClient bg="tranparent" />
-        {/* 
-        <Box
-          sx={{
-            paddingLeft: "163px",
-            paddingRight: "163px",
-            paddingTop: "100px",
-            background: "#0B1D26",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "50px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <SuperHeadingText text="Media"></SuperHeadingText>
-              <CustomText
-                text="We’re trusted by some of the world’s most recognizable brands."
-                lineHeight="25px"
-                size="1em"
-              ></CustomText>
-            </Box>
-            <Box className="slider-avinash" sx={{ width: "100%" }}>
-              <Slider {...settings}>
-                <div>
-                  <img src={slider1} alt="" srcSet="" />
-                </div>
-                <div>
-                  <img src={slider2} alt="" srcSet="" />
-                </div>
-                <div>
-                  <img src={slider3} alt="" srcSet="" />
-                </div>
-                <div>
-                  <img src={slider4} alt="" srcSet="" />
-                </div>
-                <div>
-                  <img src={slider5} alt="" srcSet="" />
-                </div>
-              </Slider>
-            </Box>
-            <Box></Box>
-          </Box>
-        </Box> */}
+
         <Box
           sx={{
             paddingLeft: "163px",

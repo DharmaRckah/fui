@@ -51,12 +51,12 @@ const TestimonialSlider = () => {
                   style={{ width: "333px" }}
                   className="card-body shadow-1xl"
                 >
-                  <p className="text-sm  gray-500">
+                  <p className="text-sm pb-4 gray-500">
                     <BiSolidQuoteLeft />
                   </p>
                   <p
                     style={{ fontFamily: "Source Sans Pro" }}
-                    className="card-text text-sm"
+                    className="card-text pb-4 text-sm"
                   >
                     {item.content}
                   </p>
@@ -83,7 +83,7 @@ const TestimonialSlider = () => {
                       </span>
                     </div>
                   </div>
-                  <span className="flex mt-2">
+                  {/* <span className="flex mt-2">
                     <ReactStars
                       count={5}
                       onChange={ratingChanged}
@@ -97,7 +97,7 @@ const TestimonialSlider = () => {
                     >
                       5.0
                     </span>
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </div>
