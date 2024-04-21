@@ -407,13 +407,14 @@ const TechHomeInto: React.FC = () => {
                 color: "white",
               }}
             >
+              {/* Change flexDirection to "column" to stack "Follow us" vertically */}
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: ["row", "column"], // Stack icons vertically on mobile
-                  alignItems: "center",
-                  gap: ["30px", "0"], // Adjust gap for responsive design
-                  transform: ["none", "rotate(90deg)"], // Remove rotation on mobile
+                  flexDirection: "column", // Stack vertically
+                  alignItems: "flex-start",
+                  gap: "10px", // Adjusted gap between items
+                  marginLeft: "15px", // Added left margin for alignment
                 }}
               >
                 <Box
@@ -421,17 +422,22 @@ const TechHomeInto: React.FC = () => {
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: "bold",
                     color: "#FFFFFF",
+                    marginTop: "50px",
+                    transform: ["none", "rotate(90deg)"],
                   }}
                 >
                   Follow us
                 </Box>
-                <Box>
-                  <InstagramIcon />
+                <Box sx={{ transform: ["none", "rotate(90deg)"] }}>
+                  <InstagramIcon className="md:ml-10 lg:ml-10 sm:ml-5 mt-1" />{" "}
+                  {/* Icon is now vertically stacked */}
                 </Box>
                 <Box>
-                  <XIcon />
+                  <XIcon className="ml-5 mt-3" />{" "}
+                  {/* Icon is now vertically stacked */}
                 </Box>
               </Box>
+
               <Box
                 sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
               >
@@ -439,9 +445,11 @@ const TechHomeInto: React.FC = () => {
                 <Box
                   sx={{
                     fontWeight: "400",
-                    fontSize: ["28px", "63px"], // Adjust font size for responsive design
-                    lineHeight: ["32px", "71px"], // Adjust line height for responsive design
+                    fontSize: ["28px", "63px"],
+                    lineHeight: ["32px", "71px"],
                     color: "white",
+                    textAlign: "center",
+                    justifyContent: "center",
                     fontFamily: "'Playfair Display', serif",
                   }}
                 >
@@ -450,8 +458,8 @@ const TechHomeInto: React.FC = () => {
                 <Box
                   sx={{
                     fontWeight: "400",
-                    fontSize: ["28px", "63px"], // Adjust font size for responsive design
-                    lineHeight: ["32px", "71px"], // Adjust line height for responsive design
+                    fontSize: ["28px", "63px"],
+                    lineHeight: ["32px", "71px"],
                     color: "white",
                     fontFamily: "'Playfair Display', serif",
                   }}
@@ -1516,7 +1524,7 @@ const TechHomeInto: React.FC = () => {
         </Box>
 
         <OurClient bg="tranparent" />
-
+        {/* 
         <Box
           sx={{
             paddingLeft: "163px",
@@ -1565,6 +1573,105 @@ const TechHomeInto: React.FC = () => {
                 </div>
                 <div>
                   <img src={slider5} alt="" srcSet="" />
+                </div>
+              </Slider>
+            </Box>
+            <Box></Box>
+          </Box>
+        </Box> */}
+        <Box
+          sx={{
+            paddingLeft: "163px",
+            paddingRight: "163px",
+            paddingTop: "100px",
+            background: "#0B1D26",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "50px",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <SuperHeadingText text="Media"></SuperHeadingText>
+              <CustomText
+                text="We’re trusted by some of the world’s most recognizable brands."
+                lineHeight="25px"
+                size="1em"
+              ></CustomText>
+            </Box>
+            <Box className="slider-avinash" sx={{ width: "100%" }}>
+              <Slider {...settings}>
+                <div>
+                  <img
+                    src={slider1}
+                    alt=""
+                    srcSet=""
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={slider2}
+                    alt=""
+                    srcSet=""
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={slider3}
+                    alt=""
+                    srcSet=""
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={slider4}
+                    alt=""
+                    srcSet=""
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={slider5}
+                    alt=""
+                    srcSet=""
+                    style={{
+                      width: "100%",
+                      height: "400px",
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
               </Slider>
             </Box>

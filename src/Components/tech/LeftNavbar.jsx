@@ -12,9 +12,10 @@ const LeftNavbar = ({ backgroundColor }) => {
 
   return (
     <nav
-      className={`h-[10vh] w-full text-white bg-[${backgroundColor}] flex justify-start items-center p-8 py-10  cursor-pointer  ${
+      className={`h-[10vh] w-full flex justify-start items-center p-8 py-10  cursor-pointer  ${
         isOpen ? "bg-opacity-75" : ""
       }`}
+      //  text-white bg-[${backgroundColor}]
     >
       {" "}
       <Link to="/">

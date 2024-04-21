@@ -88,7 +88,7 @@
 // const OurClient = ({ bg = "white" }) => {
 //   return (
 //     <div
-//       className="parent mx-8 px-8  "
+//       className="parent "
 //       style={{ backgroundColor: bg, color: bg === "white" ? "black" : "white" }}
 //     >
 //       <style>
@@ -97,24 +97,14 @@
 //   }`}
 //       </style>
 
-//       <h3 className="mx-4 h2 fw-bold py-2 text-center italic font-Aleggra ">
-//         Our Clients{" "}
-//       </h3>
+//       <h3 className="mx-4 h2 fw-bold py-2 text-center ">Our Clients </h3>
 //       <p className="mx-4 fw-bold py-2  text-center">
 //         We’re trusted by some of the world’s most recognizable brands.{" "}
 //       </p>
-//       {/* <Carousel
-//         responsive={responsive}
-//         autoPlay={false}
-//         swipeable={true}
-//         draggable={true}
-//         showDots={true}
-//         infinite={true}
-//         partialVisible={false}
-//       > */}
+
 //       <Marquee direction="left" speed={40} responsive={responsive}>
 //         {sliderImageUrl.map((imageUrl, index) => (
-//           <div className="slider " key={index} style={styles.slider}>
+//           <div className="slider" key={index} style={styles.slider}>
 //             <img src={imageUrl.url} alt="slider" style={styles.image} />
 //           </div>
 //         ))}
@@ -127,20 +117,50 @@
 
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 1,
+  },
+};
 
 const styles = {
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(5, 1fr)",
-    gridGap: "20px",
+  slider: {
+    margin: "0 20px",
+    overflow: "hidden",
     padding: "2rem 0",
   },
   image: {
-    width: "100%",
-    height: "100px",
+    width: 100,
+    aspectRatio: "3/2",
     objectFit: "contain",
-    top: "20px",
+    mixBlendMode: "color-burn",
+    // filter: brightness(0.5) ,grayscale(100%);
   },
+  dotButton: {
+    border: "none",
+    background: "rgb(255, 68, 68)",
+  },
+  activeDotButton: {
+    background: "rgb(255, 68, 68) !important",
+  },
+  // react-multiple-carousel__arrow:{
+  //   display:"none"
+  // }
 };
 
 const sliderImageUrl = [
@@ -185,24 +205,34 @@ const sliderImageUrl = [
 const OurClient = ({ bg = "white" }) => {
   return (
     <div
-      className="parent md:mx-[4rem] md:px-[4rem] lg:mx-[4rem] lg:px-[4rem] lg:mx-[4rem] lg:px-[4rem]  mx-[1rem] px-[1rem]"
+      className="parent "
       style={{ backgroundColor: bg, color: bg === "white" ? "black" : "white" }}
     >
-      <h3 className="mx-4 h2 fw-bold py-2 text-center italic font-Aleggra ">
-        Our Clients{" "}
-      </h3>
+      <style>
+        {`.react-multiple-carousel__arrow {
+    display: none;
+  }`}
+      </style>
+
+      <h3 className="mx-4 h2 fw-bold py-2 text-center ">Our Clients </h3>
       <p className="mx-4 fw-bold py-2  text-center">
         We’re trusted by some of the world’s most recognizable brands.{" "}
       </p>
-      <div style={styles.container}>
+
+      <Marquee
+        direction="left"
+        speed={40}
+        className=" container w-[90%]"
+        responsive={responsive}
+      >
         {sliderImageUrl.map((imageUrl, index) => (
-          <div key={index} style={styles.slider}>
+          <div className="slider " key={index} style={styles.slider}>
             <img src={imageUrl.url} alt="slider" style={styles.image} />
           </div>
         ))}
-      </div>
+      </Marquee>
+      {/* </Carousel> */}
     </div>
   );
 };
-
 export default OurClient;

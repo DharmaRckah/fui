@@ -68,6 +68,7 @@
 // };
 
 // export default Testom;
+
 import React from "react";
 import image from "../assets/infrastructure/OurSustainabilityStrategy.png";
 
