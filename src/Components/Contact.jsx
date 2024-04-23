@@ -62,15 +62,15 @@ const Contact = () => {
           <div className="mt-5 flex flex-col justify-start">
             <div className="flex items-center justify-start mb-3">
               <FontAwesomeIcon className="p-0" icon={faPhoneVolume} />
-              <p className="p-3">00971522449584</p>
+              <p className="p-2">00971522449584</p>
             </div>
             <div className="flex items-center justify-start mb-3">
               <FontAwesomeIcon className="p-0" icon={faEnvelope} />
-              <p className="p-3">reach@everestdg.com</p>
+              <p className="p-2">reach@everestdg.com</p>
             </div>
             <div className="flex items-center justify-start">
               <FontAwesomeIcon className="p-0" icon={faLocationDot} />
-              <p className="p-3">
+              <p className="p-2">
                 26 floor, dar al awadhi tower, <br /> Kuwait City, Safat kuwait
               </p>
             </div>
@@ -105,25 +105,15 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-6 flex flex-col p-2">
                 <p>First Name</p>
-                <input
-                  className="border-bottom border-dark w-75"
-                  placeholder="Dharma"
-                />
+                <input className="border-bottom border-dark w-75" />
               </div>
               <div className="col-md-6 flex flex-col p-2">
                 <p>Last Name</p>
-                <input
-                  className="border-bottom border-dark w-75"
-                  placeholder="Singh"
-                />
+                <input className="border-bottom border-dark w-75" />
               </div>
               <div className="col-md-6 flex flex-col p-2">
                 <p>Email</p>
-                <input
-                  className="border-bottom border-dark w-75"
-                  type="text"
-                  placeholder="johan@gmail.com"
-                />
+                <input className="border-bottom border-dark w-75" type="text" />
               </div>
 
               <div className="col-12 d-flex flex-col p-2">
@@ -165,9 +155,9 @@ const Contact = () => {
 
                 <div className="d-flex align-items-center justify-content-between col-11 px-1">
                   <input
-                    className="border-bottom border-dark w-100"
+                    className="border-bottom border-dark  w-100"
                     type="text"
-                    placeholder="message"
+                    placeholder=" Write your message.."
                   />
                 </div>
               </div>
