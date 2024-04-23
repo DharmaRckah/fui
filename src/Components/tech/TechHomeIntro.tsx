@@ -1277,7 +1277,14 @@ const TechHomeInto: React.FC = () => {
                                 fontSize: "14px",
                               }}
                             >
-                              EXPLORE MORE <ArrowRightAltIcon />{" "}
+                              <Link
+                                to="https://we.tl/t-P9esW8IbUD"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                EXPLORE MORE
+                              </Link>
+                              <ArrowRightAltIcon />{" "}
                             </Box>
                           </Box>
                         </Box>

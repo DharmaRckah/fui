@@ -2,17 +2,15 @@ import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+
 import {
   faEnvelope,
   faLocationDot,
   faPhoneVolume,
-  faX,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faDiscord,
-  faInstagram,
-  faInstagramSquare,
-} from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   const Addresses = [
@@ -51,13 +49,13 @@ const Contact = () => {
         <p className="text-3xl font-Montserrat font-bold text-[#F6AF03]">
           Contact Us
         </p>
-        <p className="font-DMsans p-3">
+        <p className="font-DMsans p-2">
           Any question or remarks? Just write us a message!
         </p>
       </div>
-      <div className="w-[87%] m-auto mb-10 flex justify-between align-middle rounded-md row">
+      <div className="w-[90%] m-auto mb-10 flex justify-between align-middle rounded-md row">
         <div className="h-full col-md-5 bg-[#152E3A] rounded-md relative overflow-hidden text-white p-5">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex   flex-col items-center justify-center">
             <h1 className="text-3xl font-bold">Contact Information</h1>
             <p className="mt-3">Say something to start a live chat!</p>
           </div>
@@ -78,21 +76,15 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex items-start justify-between mt-5 w-25">
-            <p className="p-1 px-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
-              <FontAwesomeIcon className=" hover:text-yellow-500" icon={faX} />
+          <div className="flex items-start justify-between mt-5 w-28">
+            <p className="p-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
+              <FaTwitter />
             </p>
-            <p className="p-1 px-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
-              <FontAwesomeIcon
-                className=" hover:text-yellow-500"
-                icon={faInstagram}
-              />
+            <p className="p-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
+              <FaInstagram />
             </p>
-            <p className="p-1 px-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
-              <FontAwesomeIcon
-                className=" hover:text-yellow-500"
-                icon={faDiscord}
-              />
+            <p className="p-2 rounded-full bg-amber-400 text-white hover:text-yellow-500 hover:bg-white transition duration-300">
+              <FaDiscord />
             </p>
           </div>
 
@@ -181,10 +173,10 @@ const Contact = () => {
               </div>
               <div className="d-flex align-items-center justify-content-end col-11 mt-3 px-1">
                 <button
-                  className="btn text-white w-25 px-2 px-md-0 mx-4 pr-4"
+                  className="btn text-white w-36 px-2 px-md-0 "
                   style={{ backgroundColor: "#152E3A" }}
                 >
-                  Submit
+                  Send Message
                 </button>
               </div>
             </div>
@@ -192,13 +184,13 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="container my-3">
+      <div className="container w-[93%] mt-16 mb-16">
         <div className="row">
           {Addresses.map((item, index) => (
             <div key={index - 1} className="col-md-4  text-white row">
               <div className="">
                 <div
-                  className=" m-2 p-5 rounded-3"
+                  className=" m-2 p-4 rounded-3 "
                   style={{ backgroundColor: "#152E3A" }}
                 >
                   <div className="d-flex align-items-center justify-content-start">
@@ -209,9 +201,9 @@ const Contact = () => {
                       height={10}
                       style={{ filter: "invert(100%)" }}
                     />
-                    <h2 className="h3 px-2">{item.country.toUpperCase()}</h2>
+                    <h2 className="h4 px-2">{item.country.toUpperCase()}</h2>
                   </div>
-                  <h6 className="h6">{item.place}</h6>
+                  <h6 className="p">{item.place}</h6>
                 </div>
               </div>
             </div>
