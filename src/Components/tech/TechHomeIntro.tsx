@@ -1278,8 +1278,7 @@ const TechHomeInto: React.FC = () => {
                               }}
                             >
                               <Link
-                                to="https://we.tl/t-P9esW8IbUD"
-                                target="_blank"
+                                to="/technology/metaverse-development"
                                 rel="noopener noreferrer"
                               >
                                 EXPLORE MORE

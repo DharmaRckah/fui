@@ -1,0 +1,361 @@
+:root {
+  --primaryColor: #d10ed1;
+  --secondary: #10a3da;
+  --bg: #010208;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: orbitron;
+  src: url("../../Asset/font/Orbitron-Medium.ttf");
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  background-color: var(--bg);
+  color: white;
+  overflow-x: hidden !important;
+}
+
+a.navbar-brand img {
+  width: 160px;
+}
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  justify-content: center;
+}
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row;
+  gap: 43px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+  font-size: 18px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.nav-link:hover {
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+nav.navbar.navbar-expand-lg {
+  padding: 22px 0;
+}
+.heroDiv {
+  position: relative;
+  /* background-image: linear-gradient(transparent, transparent, #010208); */
+}
+
+img.Vector_1 {
+  width: 70px;
+  position: absolute;
+  top: 25%;
+  animation: mymove 30s infinite;
+}
+
+img.heroImg {
+  width: 100%;
+  background-image: linear-gradient(transparent, #010208, #010208);
+}
+
+section.section_1 {
+  padding: 100px 0;
+}
+
+.title {
+  font-size: 65px;
+  line-height: 85px;
+}
+li.nav-item a {
+  color: white;
+}
+.title > .span {
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.div_color {
+  /* background: red; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(transparent, #01020800, #010208);
+}
+p.para {
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 25px 0;
+}
+
+.d-flex.btn_flex {
+  gap: 0 25px;
+}
+
+button.btn.get_btn {
+  color: white;
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+  border: 0;
+  padding: 13px 60px;
+  font-size: 18px;
+  border-radius: 50rem;
+}
+button.btn.explore_btn {
+  background: linear-gradient(#010208, #010208) padding-box,
+    linear-gradient(to right, var(--primaryColor), var(--secondary)) border-box;
+  border-radius: 0em;
+  border: 4px solid transparent !important;
+  color: white;
+  border: 0;
+  padding: 13px 60px;
+  font-size: 18px;
+  border-radius: 50rem;
+  animation: all 0.5s linear;
+}
+
+button.btn.explore_btn:hover {
+  color: white;
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+  border: 0;
+  padding: 13px 60px;
+  font-size: 18px;
+  border-radius: 50rem;
+  animation: all 0.5s linear;
+}
+.d-flex.counter_flex {
+  gap: 50px;
+  padding-top: 50px;
+  animation: counter_flexs 10.5s all linear;
+}
+
+p.onload_Counter {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+img.img.image_1 {
+  width: 100%;
+}
+
+section.section_2 {
+  padding: 100px 0;
+  position: relative;
+}
+
+.paddingLeft,
+.paddingRight {
+  padding-left: 60px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background: transparent;
+  background: linear-gradient(#010208, #010208) padding-box,
+    linear-gradient(to right, var(--primaryColor), var(--secondary)) border-box;
+  border-radius: 0em;
+  border: 4px solid transparent !important;
+  color: white;
+  border: 0;
+  /* padding: 13px 60px; */
+  /* font-size: 18px; */
+  border-radius: 24px;
+  overflow: hidden;
+
+  height: 600px;
+}
+p.paraText {
+  font-family: sans-serif;
+}
+.card-body > h4 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.card-body > .d-flex {
+  /* background: red; */
+  padding: 20px 0;
+}
+.card-body > .d-flex {
+  /* background: red; */
+  padding: 20px 0;
+  margin-top: auto;
+}
+.sliderText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* background: red; */
+  width: 100%;
+  padding: 50px 25px;
+  backdrop-filter: blur(50px);
+}
+
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background: linear-gradient(#010208, #010208) padding-box,
+    linear-gradient(to right, var(--primaryColor), var(--secondary)) border-box;
+  border-radius: 0em;
+  border: 4px solid transparent !important;
+  color: white;
+  border: 0;
+  /* padding: 13px 60px; */
+  font-size: 18px;
+  border-radius: 36px;
+}
+video.videoMeta {
+  background: linear-gradient(#010208, #010208) padding-box,
+    linear-gradient(to right, var(--primaryColor), var(--secondary)) border-box;
+  border-radius: 0em;
+  border: 5px solid transparent !important;
+  color: white;
+  border: 0;
+  /* padding: 13px 60px; */
+  font-size: 18px;
+  border-radius: 2rem;
+  transition: 0.4s all linear;
+}
+
+.footerBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-md-6.footerMainBlock {
+  display: flex;
+  align-items: flex-start;
+  /* align-content: center; */
+  justify-content: space-between;
+}
+h3.footerTitle {
+  padding-bottom: 20px;
+}
+
+a.footerLink {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+.d-flex.gap {
+  gap: 14px;
+}
+hr.container.hrContainer {
+  color: var(--primaryColor);
+}
+
+button.btn.get_btn:hover {
+  box-shadow: 1px 1px 6px 4px var(--primaryColor);
+}
+
+@keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 200px;
+  }
+  50% {
+    top: 100px;
+  }
+  75% {
+    top: 200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+img.c_img_1 {
+  position: absolute;
+  width: 45%;
+  left: -28%;
+  top: 0;
+  animation: circle 5s infinite;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+img.c_img_1.right {
+  right: -25%;
+  left: auto;
+  /* background: red; */
+  position: absolute;
+}
+
+video.videoMeta:hover {
+  transition: 0.4s all linear;
+  scale: 1.1;
+}
+
+.quote {
+  overflow: hidden;
+}
+
+.split-line {
+  overflow: hidden;
+}
+
+@keyframes counter_flexs {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.card:hover {
+  scale: 1.03;
+  transition: all 0.2s linear;
+}
+.card {
+  transition: all 0.2s linear;
+}
+
+a.footerLink:hover {
+  background-image: linear-gradient(var(--secondary), var(--primaryColor));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all 0.5s linear;
+}
+
+h4.animate-text {
+  font-family: "orbitron";
+  font-size: 30px;
+}
